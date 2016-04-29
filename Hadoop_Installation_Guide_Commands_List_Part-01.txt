@@ -1,0 +1,1669 @@
+hadoop-1.2.1/src/packages/rpm/init.d/hadoop-secondarynamenode
+hadoop-1.2.1/src/packages/rpm/init.d/hadoop-tasktracker
+hadoop-1.2.1/src/packages/rpm/spec/hadoop.spec
+hadoop-1.2.1/src/packages/templates/conf/capacity-scheduler.xml
+hadoop-1.2.1/src/packages/templates/conf/commons-logging.properties
+hadoop-1.2.1/src/packages/templates/conf/core-site.xml
+hadoop-1.2.1/src/packages/templates/conf/hadoop-env.sh
+hadoop-1.2.1/src/packages/templates/conf/hadoop-metrics2.properties
+hadoop-1.2.1/src/packages/templates/conf/hadoop-policy.xml
+hadoop-1.2.1/src/packages/templates/conf/hdfs-site.xml
+hadoop-1.2.1/src/packages/templates/conf/log4j.properties
+hadoop-1.2.1/src/packages/templates/conf/mapred-queue-acls.xml
+hadoop-1.2.1/src/packages/templates/conf/mapred-site.xml
+hadoop-1.2.1/src/packages/templates/conf/taskcontroller.cfg
+hadoop-1.2.1/src/packages/update-hadoop-env.sh
+hadoop-1.2.1/src/saveVersion.sh
+hadoop-1.2.1/src/test/META-INF/services/org.apache.hadoop.security.token.TokenRenewer
+hadoop-1.2.1/src/test/all-tests
+hadoop-1.2.1/src/test/aop/build/aop.xml
+hadoop-1.2.1/src/test/aop/org/apache/hadoop/fi/FiConfig.java
+hadoop-1.2.1/src/test/aop/org/apache/hadoop/fi/ProbabilityModel.java
+hadoop-1.2.1/src/test/bin/runScript.sh
+hadoop-1.2.1/src/test/bin/test-patch.sh
+hadoop-1.2.1/src/test/checkstyle-noframes-sorted.xsl
+hadoop-1.2.1/src/test/checkstyle.xml
+hadoop-1.2.1/src/test/commit-tests
+hadoop-1.2.1/src/test/core-site.xml
+hadoop-1.2.1/src/test/ddl/buffer.jr
+hadoop-1.2.1/src/test/ddl/int.jr
+hadoop-1.2.1/src/test/ddl/string.jr
+hadoop-1.2.1/src/test/ddl/test.jr
+hadoop-1.2.1/src/test/fi-site.xml
+hadoop-1.2.1/src/test/findbugsExcludeFile.xml
+hadoop-1.2.1/src/test/hadoop-policy.xml
+hadoop-1.2.1/src/test/hadoop-site.xml
+hadoop-1.2.1/src/test/hdfs-site.xml
+hadoop-1.2.1/src/test/krb5.conf
+hadoop-1.2.1/src/test/lib/ftplet-api-1.0.0-SNAPSHOT.jar
+hadoop-1.2.1/src/test/lib/ftpserver-core-1.0.0-SNAPSHOT.jar
+hadoop-1.2.1/src/test/lib/ftpserver-server-1.0.0-SNAPSHOT.jar
+hadoop-1.2.1/src/test/lib/mina-core-2.0.0-M2-20080407.124109-12.jar
+hadoop-1.2.1/src/test/log4j.properties
+hadoop-1.2.1/src/test/mapred-site.xml
+hadoop-1.2.1/src/test/org/apache/hadoop/cli/TestCLI.java
+hadoop-1.2.1/src/test/org/apache/hadoop/cli/clitest_data/data120bytes
+hadoop-1.2.1/src/test/org/apache/hadoop/cli/clitest_data/data15bytes
+hadoop-1.2.1/src/test/org/apache/hadoop/cli/clitest_data/data30bytes
+hadoop-1.2.1/src/test/org/apache/hadoop/cli/clitest_data/data60bytes
+hadoop-1.2.1/src/test/org/apache/hadoop/cli/testConf.xml
+hadoop-1.2.1/src/test/org/apache/hadoop/cli/testConf.xsl
+hadoop-1.2.1/src/test/org/apache/hadoop/cli/util/CLITestData.java
+hadoop-1.2.1/src/test/org/apache/hadoop/cli/util/CommandExecutor.java
+hadoop-1.2.1/src/test/org/apache/hadoop/cli/util/ComparatorBase.java
+hadoop-1.2.1/src/test/org/apache/hadoop/cli/util/ComparatorData.java
+hadoop-1.2.1/src/test/org/apache/hadoop/cli/util/ExactComparator.java
+hadoop-1.2.1/src/test/org/apache/hadoop/cli/util/RegexpComparator.java
+hadoop-1.2.1/src/test/org/apache/hadoop/cli/util/SubstringComparator.java
+hadoop-1.2.1/src/test/org/apache/hadoop/cli/util/TokenComparator.java
+hadoop-1.2.1/src/test/org/apache/hadoop/conf/TestConfServlet.java
+hadoop-1.2.1/src/test/org/apache/hadoop/conf/TestConfiguration.java
+hadoop-1.2.1/src/test/org/apache/hadoop/conf/TestGetInstances.java
+hadoop-1.2.1/src/test/org/apache/hadoop/conf/TestJobConf.java
+hadoop-1.2.1/src/test/org/apache/hadoop/conf/TestNoDefaultsJobConf.java
+hadoop-1.2.1/src/test/org/apache/hadoop/filecache/TestMRWithDistributedCache.java
+hadoop-1.2.1/src/test/org/apache/hadoop/filecache/TestTrackerDistributedCacheManager.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/AccumulatingReducer.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/DFSCIOTest.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/DistributedFSCheck.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/FSMainOperationsBaseTest.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/FileSystemContractBaseTest.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/FileSystemTestHelper.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/IOMapperBase.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/TestChecksumFileSystem.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/TestCopyFiles.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/TestDFSIO.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/TestDU.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/TestDisableCache.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/TestFSMainOperationsLocalFileSystem.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/TestFileSystem.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/TestFileSystemCaching.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/TestFileUtil.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/TestFsShellReturnCode.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/TestGetFileBlockLocations.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/TestGlobExpander.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/TestGlobPaths.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/TestGlobPattern.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/TestHarFileSystem.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/TestHardLink.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/TestLocalDirAllocator.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/TestLocalFileSystem.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/TestLocalFileSystemPermission.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/TestPath.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/TestTrash.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/TestTruncatedInputBug.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/TestUrlStreamHandler.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/ftp/TestFTPFileSystem.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/kfs/KFSEmulationImpl.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/kfs/TestKosmosFileSystem.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/loadGenerator/DataGenerator.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/loadGenerator/LoadGenerator.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/loadGenerator/StructureGenerator.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/loadGenerator/TestLoadGenerator.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/permission/TestFsPermission.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/s3/InMemoryFileSystemStore.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/s3/Jets3tS3FileSystemContractTest.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/s3/S3FileSystemContractBaseTest.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/s3/TestINode.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/s3/TestInMemoryS3FileSystemContract.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/s3/TestS3Credentials.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/s3/TestS3FileSystem.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/s3native/InMemoryNativeFileSystemStore.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/s3native/Jets3tNativeS3FileSystemContractTest.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/s3native/NativeS3FileSystemContractBaseTest.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/s3native/TestInMemoryNativeS3FileSystemContract.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/slive/AppendOp.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/slive/ArgumentParser.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/slive/BadFileException.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/slive/ConfigExtractor.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/slive/ConfigMerger.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/slive/ConfigOption.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/slive/Constants.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/slive/CreateOp.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/slive/DataHasher.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/slive/DataVerifier.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/slive/DataWriter.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/slive/DeleteOp.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/slive/DummyInputFormat.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/slive/Formatter.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/slive/Helper.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/slive/ListOp.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/slive/MkdirOp.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/slive/ObserveableOp.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/slive/Operation.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/slive/OperationData.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/slive/OperationFactory.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/slive/OperationOutput.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/slive/OperationWeight.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/slive/PathFinder.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/slive/Range.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/slive/ReadOp.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/slive/RenameOp.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/slive/ReportWriter.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/slive/RouletteSelector.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/slive/SleepOp.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/slive/SliveMapper.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/slive/SlivePartitioner.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/slive/SliveReducer.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/slive/SliveTest.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/slive/TestSlive.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/slive/Timer.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/slive/WeightSelector.java
+hadoop-1.2.1/src/test/org/apache/hadoop/fs/slive/Weights.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/AppendTestUtil.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/BenchmarkThroughput.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/DFSTestUtil.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/DataNodeCluster.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/MiniDFSCluster.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/MiniDFSClusterWithNodeGroup.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/NNBench.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/NNBenchWithoutMR.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/TestAbandonBlock.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/TestBalancerBandwidth.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/TestBlocksScheduledCounter.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/TestByteRangeInputStream.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/TestCrcCorruption.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/TestDFSClientExcludedNodes.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/TestDFSClientRetries.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/TestDFSFinalize.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/TestDFSMkdirs.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/TestDFSPermission.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/TestDFSRemove.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/TestDFSRename.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/TestDFSRollback.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/TestDFSShell.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/TestDFSShellGenericOptions.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/TestDFSStartupVersions.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/TestDFSStorageStateRecovery.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/TestDFSUpgrade.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/TestDFSUpgradeFromImage.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/TestDataTransferProtocol.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/TestDatanodeBlockScanner.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/TestDatanodeDeath.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/TestDatanodeReport.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/TestDecommission.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/TestDefaultNameNodePort.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/TestDistributedFileSystem.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/TestFSInputChecker.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/TestFSOutputSummer.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/TestFileAppend.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/TestFileAppend2.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/TestFileAppend3.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/TestFileAppend4.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/TestFileConcurrentReader.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/TestFileCorruption.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/TestFileCreation.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/TestFileCreationClient.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/TestFileCreationDelete.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/TestFileCreationEmpty.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/TestFileCreationNamenodeRestart.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/TestFileLengthOnClusterRestart.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/TestFileStatus.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/TestGetBlocks.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/TestHDFSFileSystemContract.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/TestHDFSServerPorts.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/TestHDFSTrash.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/TestHftpFileSystem.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/TestInjectionForSimulatedStorage.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/TestLease.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/TestLeaseRecovery.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/TestLeaseRecovery2.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/TestListPathServlet.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/TestLocalDFS.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/TestMissingBlocksAlert.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/TestModTime.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/TestMultiThreadedSync.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/TestPersistBlocks.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/TestPread.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/TestQuota.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/TestRenameWhileOpen.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/TestReplication.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/TestRestartDFS.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/TestSafeMode.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/TestSeekBug.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/TestSetTimes.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/TestSetrepDecreasing.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/TestSetrepIncreasing.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/TestShortCircuitLocalRead.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/TestSmallBlock.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/TestSyncingWriterInterrupted.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/TestWriteConfigurationToDFS.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/UpgradeUtilities.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/hadoop-1.0-multiblock-file.tgz
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/hadoop-14-dfs-dir.tgz
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/hadoop-dfs-dir.txt
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/protocol/TestLayoutVersion.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/security/TestClientProtocolWithDelegationToken.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/security/TestDelegationToken.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/security/TestDelegationTokenAuthMethod.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/security/TestDelegationTokenForProxyUser.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/security/token/TestDelegationTokenRenewer.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/security/token/block/SecurityTestUtil.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/security/token/block/TestBlockToken.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/server/balancer/TestBalancer.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/server/balancer/TestBalancerWithNodeGroup.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/server/common/TestDistributedUpgrade.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/server/datanode/FSDatasetTestUtil.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/server/datanode/SimulatedFSDataset.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/server/datanode/TestBlockReplacement.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/server/datanode/TestBlockReportGeneration.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/server/datanode/TestDataBlockScanner.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/server/datanode/TestDataNodeMXBean.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/server/datanode/TestDataNodeMetrics.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/server/datanode/TestDataNodeVersionCheck.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/server/datanode/TestDataNodeVolumeFailure.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/server/datanode/TestDiskError.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/server/datanode/TestInterDatanodeProtocol.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/server/datanode/TestSimulatedFSDataset.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/server/datanode/TestStuckDataNode.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/server/namenode/CreateEditsLog.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/server/namenode/FSImageAdapter.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/server/namenode/FileNameGenerator.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/server/namenode/NNThroughputBenchmark.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/server/namenode/NameNodeAdapter.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/server/namenode/TestBBWBlockReport.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/server/namenode/TestBlockTokenWithDFS.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/server/namenode/TestCheckPointForSecurityTokens.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/server/namenode/TestCheckpoint.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/server/namenode/TestComputeInvalidateWork.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/server/namenode/TestCorruptFilesJsp.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/server/namenode/TestDFSConcurrentFileOperations.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/server/namenode/TestDatanodeDescriptor.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/server/namenode/TestDeadDatanode.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/server/namenode/TestDecommissioningStatus.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/server/namenode/TestEditLog.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/server/namenode/TestEditLogLoading.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/server/namenode/TestEditLogToleration.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/server/namenode/TestFileLimit.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/server/namenode/TestFsck.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/server/namenode/TestHDFSConcat.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/server/namenode/TestHeartbeatHandling.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/server/namenode/TestHost2NodesMap.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/server/namenode/TestINodeFile.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/server/namenode/TestJspHelper.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/server/namenode/TestLargeDirectoryDelete.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/server/namenode/TestLeaseManager.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/server/namenode/TestMetaSave.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/server/namenode/TestNNThroughputBenchmark.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/server/namenode/TestNameCache.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/server/namenode/TestNameEditsConfigs.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/server/namenode/TestNameNodeCorruptionRecovery.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/server/namenode/TestNameNodeFormat.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/server/namenode/TestNameNodeMXBean.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/server/namenode/TestNameNodeRecovery.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/server/namenode/TestNamenodeCapacityReport.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/server/namenode/TestNodeCount.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/server/namenode/TestOverReplicatedBlocks.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/server/namenode/TestPendingReplication.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/server/namenode/TestReplicationPolicy.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/server/namenode/TestReplicationPolicyWithNodeGroup.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/server/namenode/TestSaveNamespace.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/server/namenode/TestSecurityTokenEditLog.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/server/namenode/TestStartup.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/server/namenode/TestStorageDirectoryFailure.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/server/namenode/TestStorageRestore.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/server/namenode/TestUnderReplicatedBlocks.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/server/namenode/metrics/TestNNMetricFilesInGetListingOps.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/server/namenode/metrics/TestNameNodeMetrics.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/server/namenode/web/resources/TestWebHdfsDataLocality.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/tools/offlineImageViewer/SpotCheckImageVisitor.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/tools/offlineImageViewer/TestDelimitedImageVisitor.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/tools/offlineImageViewer/TestOIVCanReadOldVersions.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/tools/offlineImageViewer/TestOfflineImageViewer.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/tools/offlineImageViewer/fsimageV18
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/tools/offlineImageViewer/fsimageV19
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/util/TestGSet.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/web/TestAuthFilter.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/web/TestFSMainOperationsWebHdfs.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/web/TestJsonUtil.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/web/TestOffsetUrlInputStream.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/web/TestWebHDFS.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/web/TestWebHdfsFileSystemContract.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/web/TestWebHdfsUrl.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/web/WebHdfsTestUtil.java
+hadoop-1.2.1/src/test/org/apache/hadoop/hdfs/web/resources/TestParam.java
+hadoop-1.2.1/src/test/org/apache/hadoop/http/TestGlobalFilter.java
+hadoop-1.2.1/src/test/org/apache/hadoop/http/TestHtmlQuoting.java
+hadoop-1.2.1/src/test/org/apache/hadoop/http/TestHttpServer.java
+hadoop-1.2.1/src/test/org/apache/hadoop/http/TestServletFilter.java
+hadoop-1.2.1/src/test/org/apache/hadoop/http/resource/JerseyResource.java
+hadoop-1.2.1/src/test/org/apache/hadoop/io/FileBench.java
+hadoop-1.2.1/src/test/org/apache/hadoop/io/RandomDatum.java
+hadoop-1.2.1/src/test/org/apache/hadoop/io/TestArrayFile.java
+hadoop-1.2.1/src/test/org/apache/hadoop/io/TestArrayWritable.java
+hadoop-1.2.1/src/test/org/apache/hadoop/io/TestBloomMapFile.java
+hadoop-1.2.1/src/test/org/apache/hadoop/io/TestBytesWritable.java
+hadoop-1.2.1/src/test/org/apache/hadoop/io/TestDefaultStringifier.java
+hadoop-1.2.1/src/test/org/apache/hadoop/io/TestGenericWritable.java
+hadoop-1.2.1/src/test/org/apache/hadoop/io/TestIOUtils.java
+hadoop-1.2.1/src/test/org/apache/hadoop/io/TestMD5Hash.java
+hadoop-1.2.1/src/test/org/apache/hadoop/io/TestMapFile.java
+hadoop-1.2.1/src/test/org/apache/hadoop/io/TestMapWritable.java
+hadoop-1.2.1/src/test/org/apache/hadoop/io/TestSecureIOUtils.java
+hadoop-1.2.1/src/test/org/apache/hadoop/io/TestSequenceFile.java
+hadoop-1.2.1/src/test/org/apache/hadoop/io/TestSequenceFileMergeProgress.java
+hadoop-1.2.1/src/test/org/apache/hadoop/io/TestSequenceFileSerialization.java
+hadoop-1.2.1/src/test/org/apache/hadoop/io/TestSetFile.java
+hadoop-1.2.1/src/test/org/apache/hadoop/io/TestSortedMapWritable.java
+hadoop-1.2.1/src/test/org/apache/hadoop/io/TestText.java
+hadoop-1.2.1/src/test/org/apache/hadoop/io/TestTextNonUTF8.java
+hadoop-1.2.1/src/test/org/apache/hadoop/io/TestUTF8.java
+hadoop-1.2.1/src/test/org/apache/hadoop/io/TestVersionedWritable.java
+hadoop-1.2.1/src/test/org/apache/hadoop/io/TestWritable.java
+hadoop-1.2.1/src/test/org/apache/hadoop/io/TestWritableName.java
+hadoop-1.2.1/src/test/org/apache/hadoop/io/TestWritableUtils.java
+hadoop-1.2.1/src/test/org/apache/hadoop/io/compress/TestBlockDecompressorStream.java
+hadoop-1.2.1/src/test/org/apache/hadoop/io/compress/TestCodec.java
+hadoop-1.2.1/src/test/org/apache/hadoop/io/compress/TestCodecFactory.java
+hadoop-1.2.1/src/test/org/apache/hadoop/io/compress/TestCompressionStreamReuse.java
+hadoop-1.2.1/src/test/org/apache/hadoop/io/file/tfile/KVGenerator.java
+hadoop-1.2.1/src/test/org/apache/hadoop/io/file/tfile/KeySampler.java
+hadoop-1.2.1/src/test/org/apache/hadoop/io/file/tfile/NanoTimer.java
+hadoop-1.2.1/src/test/org/apache/hadoop/io/file/tfile/RandomDistribution.java
+hadoop-1.2.1/src/test/org/apache/hadoop/io/file/tfile/TestTFile.java
+hadoop-1.2.1/src/test/org/apache/hadoop/io/file/tfile/TestTFileByteArrays.java
+hadoop-1.2.1/src/test/org/apache/hadoop/io/file/tfile/TestTFileComparators.java
+hadoop-1.2.1/src/test/org/apache/hadoop/io/file/tfile/TestTFileJClassComparatorByteArrays.java
+hadoop-1.2.1/src/test/org/apache/hadoop/io/file/tfile/TestTFileLzoCodecsByteArrays.java
+hadoop-1.2.1/src/test/org/apache/hadoop/io/file/tfile/TestTFileLzoCodecsStreams.java
+hadoop-1.2.1/src/test/org/apache/hadoop/io/file/tfile/TestTFileNoneCodecsByteArrays.java
+hadoop-1.2.1/src/test/org/apache/hadoop/io/file/tfile/TestTFileNoneCodecsJClassComparatorByteArrays.java
+hadoop-1.2.1/src/test/org/apache/hadoop/io/file/tfile/TestTFileNoneCodecsStreams.java
+hadoop-1.2.1/src/test/org/apache/hadoop/io/file/tfile/TestTFileSeek.java
+hadoop-1.2.1/src/test/org/apache/hadoop/io/file/tfile/TestTFileSeqFileComparison.java
+hadoop-1.2.1/src/test/org/apache/hadoop/io/file/tfile/TestTFileSplit.java
+hadoop-1.2.1/src/test/org/apache/hadoop/io/file/tfile/TestTFileStreams.java
+hadoop-1.2.1/src/test/org/apache/hadoop/io/file/tfile/TestTFileUnsortedByteArrays.java
+hadoop-1.2.1/src/test/org/apache/hadoop/io/file/tfile/TestVLong.java
+hadoop-1.2.1/src/test/org/apache/hadoop/io/file/tfile/Timer.java
+hadoop-1.2.1/src/test/org/apache/hadoop/io/nativeio/TestNativeIO.java
+hadoop-1.2.1/src/test/org/apache/hadoop/io/retry/TestRetryProxy.java
+hadoop-1.2.1/src/test/org/apache/hadoop/io/retry/UnreliableImplementation.java
+hadoop-1.2.1/src/test/org/apache/hadoop/io/retry/UnreliableInterface.java
+hadoop-1.2.1/src/test/org/apache/hadoop/io/serializer/TestWritableSerialization.java
+hadoop-1.2.1/src/test/org/apache/hadoop/ipc/MiniRPCBenchmark.java
+hadoop-1.2.1/src/test/org/apache/hadoop/ipc/TestIPC.java
+hadoop-1.2.1/src/test/org/apache/hadoop/ipc/TestIPCServerResponder.java
+hadoop-1.2.1/src/test/org/apache/hadoop/ipc/TestMiniRPCBenchmark.java
+hadoop-1.2.1/src/test/org/apache/hadoop/ipc/TestRPC.java
+hadoop-1.2.1/src/test/org/apache/hadoop/ipc/TestSaslRPC.java
+hadoop-1.2.1/src/test/org/apache/hadoop/ipc/TestServer.java
+hadoop-1.2.1/src/test/org/apache/hadoop/ipc/TestSocketFactory.java
+hadoop-1.2.1/src/test/org/apache/hadoop/jmx/TestJMXJsonServlet.java
+hadoop-1.2.1/src/test/org/apache/hadoop/log/TestLogLevel.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/BigMapOutput.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/ClusterMapReduceTestCase.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/ClusterWithLinuxTaskController.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/ControlledMapReduceJob.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/DummyMemoryCalculatorPlugin.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/EmptyInputFormat.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/FakeObjectUtilities.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/GenericMRLoadGenerator.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/HadoopTestCase.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/MRBench.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/MRCaching.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/MiniMRClientCluster.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/MiniMRClientClusterFactory.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/MiniMRCluster.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/MiniMRClusterAdapter.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/MiniMRClusterWithNodeGroup.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/NotificationTestCase.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/ReliabilityTest.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/SortValidator.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestAdminOperationsProtocolWithServiceAuthorization.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestAuditLogger.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestBadRecords.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestCleanupQueue.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestClusterMRNotification.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestClusterMapReduceTestCase.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestClusterStatus.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestCollect.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestCombineOutputCollector.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestCommandLineJobSubmission.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestComparators.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestCompressedEmptyMapOutputs.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestControlledMapReduceJob.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestCounters.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestCustomOutputCommitter.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestDiskFailures.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestDuplicateArchiveFileCachedURL.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestDuplicateArchiveFileCachedURLMinicluster.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestEmptyJob.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestFieldSelection.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestFileInputFormat.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestFileInputFormatPathFilter.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestFileOutputCommitter.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestFileOutputFormat.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestGetSplitHosts.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestIFileStreams.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestIndexCache.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestInputPath.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestIsolationRunner.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestJavaSerialization.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestJettyBugMonitor.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestJobACLs.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestJobCleanup.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestJobClient.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestJobClientRetries.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestJobCounters.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestJobDirCleanup.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestJobEndNotifier.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestJobExecutionAsDifferentUser.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestJobHistory.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestJobHistoryConfig.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestJobHistoryParsing.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestJobHistoryServer.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestJobHistoryVersion.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestJobInProgress.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestJobInProgressListener.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestJobKillAndFail.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestJobLocalizer.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestJobName.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestJobQueueInformation.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestJobQueueTaskScheduler.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestJobRetire.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestJobStatusPersistency.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestJobSysDirWithDFS.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestJobTrackerInstrumentation.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestJobTrackerPlugins.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestJobTrackerQuiescence.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestJobTrackerRestart.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestJobTrackerRestartWithLostTracker.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestJobTrackerSafeMode.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestJobTrackerStart.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestJvmManager.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestJvmReuse.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestKeyValueTextInputFormat.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestKillCompletedJob.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestKillSubProcesses.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestKillSubProcessesWithLinuxTaskController.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestLRUCache.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestLimitTasksPerJobTaskScheduler.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestLinuxTaskController.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestLinuxTaskControllerLaunchArgs.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestLocalMRNotification.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestLocalizationWithLinuxTaskController.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestLostTracker.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestMRServerPorts.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestMapCollection.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestMapOutputType.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestMapRed.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestMapredHeartbeat.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestMapredSystemDir.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestMerger.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestMiniMRBringup.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestMiniMRChildTask.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestMiniMRClasspath.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestMiniMRClientCluster.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestMiniMRDFSCaching.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestMiniMRDFSSort.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestMiniMRLocalFS.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestMiniMRMapRedDebugScript.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestMiniMRTaskTempDir.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestMiniMRWithDFS.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestMiniMRWithDFSWithDistinctUsers.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestMultiFileInputFormat.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestMultiFileSplit.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestMultipleLevelCaching.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestMultipleTextOutputFormat.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestNetworkedJob.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestNodeBlacklisting.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestNodeGroupAwareTaskPlacement.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestNodeHealthService.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestNodeRefresh.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestNonLocalJobJarSubmission.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestParallelInitialization.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestQueueAclsForCurrentUser.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestQueueManager.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestQueueManagerForJobKillAndJobPriority.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestQueueManagerForJobKillAndNonDefaultQueue.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestQueueMetrics.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestRackAwareTaskPlacement.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestRawHistoryFile.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestRecoveryManager.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestReduceFetch.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestReduceTask.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestReduceTaskFetchFail.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestResourceEstimation.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestSequenceFileAsBinaryInputFormat.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestSequenceFileAsBinaryOutputFormat.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestSequenceFileAsTextInputFormat.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestSequenceFileInputFilter.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestSequenceFileInputFormat.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestSetupAndCleanupFailure.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestSetupWorkDir.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestShuffleExceptionCount.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestShuffleJobToken.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestSortedRanges.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestSpecialCharactersInOutputPath.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestStatisticsCollector.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestSubmitJob.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestTTResourceReporting.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestTaskCommit.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestTaskEnvironment.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestTaskFail.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestTaskGraphServlet.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestTaskLauncher.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestTaskLauncherThreaded.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestTaskLimits.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestTaskLogsTruncater.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestTaskOutputSize.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestTaskStatus.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestTaskTrackerActionCleanup.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestTaskTrackerInstrumentation.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestTaskTrackerLocalization.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestTaskTrackerLogIndex.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestTaskTrackerMemoryManager.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestTaskTrackerVersionCheck.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestTextInputFormat.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestTextOutputFormat.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestTrackerBlacklistAcrossJobs.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestTrackerDistributedCacheManagerWithLinuxTaskController.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestUserDefinedCounters.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestUserLogCleanup.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestWebUIAuthorization.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/TestWritableJobConf.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/ThreadedMapBenchmark.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/UtilsForTests.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/WordCount.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/jobcontrol/JobControlTestUtils.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/jobcontrol/TestJobControl.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/jobcontrol/TestLocalJobControl.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/join/ConfigurableInputFormat.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/join/IncomparableKey.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/join/TestDatamerge.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/join/TestTupleWritable.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/lib/TestChainMapReduce.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/lib/TestCombineFileInputFormat.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/lib/TestDelegatingInputFormat.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/lib/TestKeyFieldBasedComparator.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/lib/TestKeyFieldBasedPartitioner.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/lib/TestKeyFieldHelper.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/lib/TestLineInputFormat.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/lib/TestMultipleInputs.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/lib/TestMultipleOutputs.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/lib/TestMultithreadedMapRunner.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/lib/TestTotalOrderPartitioner.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/lib/aggregate/AggregatorTests.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/lib/aggregate/TestAggregates.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/lib/db/TestConstructQuery.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/lib/db/TestDBJob.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/pipes/TestPipes.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/pipes/TestPipesAsDifferentUser.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/pipes/WordCountInputFormat.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/test.jar
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/test.tar
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/test.tar.gz
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/test.tgz
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/test.txt
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/test.zip
+hadoop-1.2.1/src/test/org/apache/hadoop/mapred/testscript.txt
+hadoop-1.2.1/src/test/org/apache/hadoop/mapreduce/MapReduceTestUtil.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapreduce/TestChild.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapreduce/TestLocalRunner.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapreduce/TestMROutputFormat.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapreduce/TestMapReduceLazyOutput.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapreduce/TestMapReduceLocal.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapreduce/TestMapperReducerCleanup.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapreduce/TestSleepJob.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapreduce/lib/db/TestDBJob.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapreduce/lib/db/TestDBOutputFormat.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapreduce/lib/db/TestDataDrivenDBInputFormat.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapreduce/lib/db/TestIntegerSplitter.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapreduce/lib/db/TestTextSplitter.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapreduce/lib/fieldsel/TestMRFieldSelection.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapreduce/lib/input/TestCombineFileInputFormat.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapreduce/lib/input/TestDelegatingInputFormat.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapreduce/lib/input/TestFileInputFormat.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapreduce/lib/input/TestKeyValueTextInputFormat.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapreduce/lib/input/TestMRSequenceFileAsBinaryInputFormat.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapreduce/lib/input/TestMRSequenceFileAsTextInputFormat.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapreduce/lib/input/TestMRSequenceFileInputFilter.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapreduce/lib/input/TestMultipleInputs.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapreduce/lib/input/TestNLineInputFormat.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapreduce/lib/jobcontrol/TestControlledJob.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapreduce/lib/jobcontrol/TestMapReduceJobControlWithMocks.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapreduce/lib/map/TestMultithreadedMapper.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapreduce/lib/output/TestJobOutputCommitter.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapreduce/lib/output/TestMRSequenceFileAsBinaryOutputFormat.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapreduce/lib/output/TestMultipleOutputs.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapreduce/lib/partition/TestBinaryPartitioner.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapreduce/lib/partition/TestInputSampler.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapreduce/lib/partition/TestKeyFieldHelper.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapreduce/lib/partition/TestMRKeyFieldBasedPartitioner.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapreduce/lib/partition/TestTotalOrderPartitioner.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapreduce/security/TestTokenCache.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapreduce/security/TestUmbilicalProtocolWithJobToken.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapreduce/security/token/TestDelegationTokenRenewal.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapreduce/security/token/delegation/TestDelegationToken.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapreduce/security/token/delegation/TestDelegationTokenAuthMethod.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapreduce/split/TestBlockLimits.java
+hadoop-1.2.1/src/test/org/apache/hadoop/mapreduce/split/TestJobSplitWriter.java
+hadoop-1.2.1/src/test/org/apache/hadoop/metrics2/filter/TestPatternFilter.java
+hadoop-1.2.1/src/test/org/apache/hadoop/metrics2/impl/ConfigBuilder.java
+hadoop-1.2.1/src/test/org/apache/hadoop/metrics2/impl/ConfigUtil.java
+hadoop-1.2.1/src/test/org/apache/hadoop/metrics2/impl/TestGangliaMetrics.java
+hadoop-1.2.1/src/test/org/apache/hadoop/metrics2/impl/TestMetricsBuilderImpl.java
+hadoop-1.2.1/src/test/org/apache/hadoop/metrics2/impl/TestMetricsConfig.java
+hadoop-1.2.1/src/test/org/apache/hadoop/metrics2/impl/TestMetricsSystemImpl.java
+hadoop-1.2.1/src/test/org/apache/hadoop/metrics2/impl/TestMetricsVisitor.java
+hadoop-1.2.1/src/test/org/apache/hadoop/metrics2/impl/TestSinkQueue.java
+hadoop-1.2.1/src/test/org/apache/hadoop/metrics2/lib/TestMetricMutables.java
+hadoop-1.2.1/src/test/org/apache/hadoop/metrics2/lib/TestMetricsRegistry.java
+hadoop-1.2.1/src/test/org/apache/hadoop/metrics2/sink/ganglia/GangliaMetricsTestHelper.java
+hadoop-1.2.1/src/test/org/apache/hadoop/metrics2/util/TestMetricsCache.java
+hadoop-1.2.1/src/test/org/apache/hadoop/metrics2/util/TestSampleStat.java
+hadoop-1.2.1/src/test/org/apache/hadoop/metrics2/util/TestTryIterator.java
+hadoop-1.2.1/src/test/org/apache/hadoop/net/StaticMapping.java
+hadoop-1.2.1/src/test/org/apache/hadoop/net/TestNetUtils.java
+hadoop-1.2.1/src/test/org/apache/hadoop/net/TestNetworkTopology.java
+hadoop-1.2.1/src/test/org/apache/hadoop/net/TestNetworkTopologyWithNodeGroup.java
+hadoop-1.2.1/src/test/org/apache/hadoop/net/TestScriptBasedMapping.java
+hadoop-1.2.1/src/test/org/apache/hadoop/net/TestSocketIOWithTimeout.java
+hadoop-1.2.1/src/test/org/apache/hadoop/record/FromCpp.java
+hadoop-1.2.1/src/test/org/apache/hadoop/record/RecordBench.java
+hadoop-1.2.1/src/test/org/apache/hadoop/record/TestBuffer.java
+hadoop-1.2.1/src/test/org/apache/hadoop/record/TestRecordIO.java
+hadoop-1.2.1/src/test/org/apache/hadoop/record/TestRecordMR.java
+hadoop-1.2.1/src/test/org/apache/hadoop/record/TestRecordVersioning.java
+hadoop-1.2.1/src/test/org/apache/hadoop/record/TestRecordWritable.java
+hadoop-1.2.1/src/test/org/apache/hadoop/record/ToCpp.java
+hadoop-1.2.1/src/test/org/apache/hadoop/security/ManualTestKeytabLogins.java
+hadoop-1.2.1/src/test/org/apache/hadoop/security/NetUtilsTestResolver.java
+hadoop-1.2.1/src/test/org/apache/hadoop/security/ShellBasedUnixGroupsNetgroupMappingTestWrapper.java
+hadoop-1.2.1/src/test/org/apache/hadoop/security/TestAuthenticationFilter.java
+hadoop-1.2.1/src/test/org/apache/hadoop/security/TestDistributedCacheAlternateFileSystem.java
+hadoop-1.2.1/src/test/org/apache/hadoop/security/TestDoAsEffectiveUser.java
+hadoop-1.2.1/src/test/org/apache/hadoop/security/TestGroupFallback.java
+hadoop-1.2.1/src/test/org/apache/hadoop/security/TestGroupsCaching.java
+hadoop-1.2.1/src/test/org/apache/hadoop/security/TestJobCredentials.java
+hadoop-1.2.1/src/test/org/apache/hadoop/security/TestKerberosName.java
+hadoop-1.2.1/src/test/org/apache/hadoop/security/TestKerberosUtil.java
+hadoop-1.2.1/src/test/org/apache/hadoop/security/TestMapredGroupMappingServiceRefresh.java
+hadoop-1.2.1/src/test/org/apache/hadoop/security/TestPermission.java
+hadoop-1.2.1/src/test/org/apache/hadoop/security/TestProxyUserFromEnv.java
+hadoop-1.2.1/src/test/org/apache/hadoop/security/TestRefreshUserMappings.java
+hadoop-1.2.1/src/test/org/apache/hadoop/security/TestSecurityUtil.java
+hadoop-1.2.1/src/test/org/apache/hadoop/security/TestUserFromEnv.java
+hadoop-1.2.1/src/test/org/apache/hadoop/security/TestUserGroupInformation.java
+hadoop-1.2.1/src/test/org/apache/hadoop/security/authentication/KerberosTestUtils.java
+hadoop-1.2.1/src/test/org/apache/hadoop/security/authentication/client/AuthenticatorTestCase.java
+hadoop-1.2.1/src/test/org/apache/hadoop/security/authentication/client/TestAuthenticatedURL.java
+hadoop-1.2.1/src/test/org/apache/hadoop/security/authentication/client/TestKerberosAuthenticator.java
+hadoop-1.2.1/src/test/org/apache/hadoop/security/authentication/client/TestPseudoAuthenticator.java
+hadoop-1.2.1/src/test/org/apache/hadoop/security/authentication/server/TestAuthenticationFilter.java
+hadoop-1.2.1/src/test/org/apache/hadoop/security/authentication/server/TestAuthenticationToken.java
+hadoop-1.2.1/src/test/org/apache/hadoop/security/authentication/server/TestKerberosAuthenticationHandler.java
+hadoop-1.2.1/src/test/org/apache/hadoop/security/authentication/server/TestPseudoAuthenticationHandler.java
+hadoop-1.2.1/src/test/org/apache/hadoop/security/authentication/util/TestSigner.java
+hadoop-1.2.1/src/test/org/apache/hadoop/security/authorize/HadoopPolicyProvider.java
+hadoop-1.2.1/src/test/org/apache/hadoop/security/authorize/TestAccessControlList.java
+hadoop-1.2.1/src/test/org/apache/hadoop/security/authorize/TestProxyUsers.java
+hadoop-1.2.1/src/test/org/apache/hadoop/security/authorize/TestServiceLevelAuthorization.java
+hadoop-1.2.1/src/test/org/apache/hadoop/security/token/TestToken.java
+hadoop-1.2.1/src/test/org/apache/hadoop/security/token/delegation/TestDelegationToken.java
+hadoop-1.2.1/src/test/org/apache/hadoop/test/AllTestDriver.java
+hadoop-1.2.1/src/test/org/apache/hadoop/test/GenericTestUtils.java
+hadoop-1.2.1/src/test/org/apache/hadoop/test/MetricsAsserts.java
+hadoop-1.2.1/src/test/org/apache/hadoop/test/MiniHadoopClusterManager.java
+hadoop-1.2.1/src/test/org/apache/hadoop/test/MoreAsserts.java
+hadoop-1.2.1/src/test/org/apache/hadoop/tools/TestDelegationTokenFetcher.java
+hadoop-1.2.1/src/test/org/apache/hadoop/tools/TestDistCh.java
+hadoop-1.2.1/src/test/org/apache/hadoop/tools/TestHadoopArchives.java
+hadoop-1.2.1/src/test/org/apache/hadoop/tools/distcp2/StubContext.java
+hadoop-1.2.1/src/test/org/apache/hadoop/tools/distcp2/TestCopyListing.java
+hadoop-1.2.1/src/test/org/apache/hadoop/tools/distcp2/TestFileBasedCopyListing.java
+hadoop-1.2.1/src/test/org/apache/hadoop/tools/distcp2/TestGlobbedCopyListing.java
+hadoop-1.2.1/src/test/org/apache/hadoop/tools/distcp2/TestIntegration.java
+hadoop-1.2.1/src/test/org/apache/hadoop/tools/distcp2/TestOptionsParser.java
+hadoop-1.2.1/src/test/org/apache/hadoop/tools/distcp2/mapred/TestCopyCommitter.java
+hadoop-1.2.1/src/test/org/apache/hadoop/tools/distcp2/mapred/TestCopyMapper.java
+hadoop-1.2.1/src/test/org/apache/hadoop/tools/distcp2/mapred/TestCopyOutputFormat.java
+hadoop-1.2.1/src/test/org/apache/hadoop/tools/distcp2/mapred/TestUniformSizeInputFormat.java
+hadoop-1.2.1/src/test/org/apache/hadoop/tools/distcp2/mapred/lib/TestDynamicInputFormat.java
+hadoop-1.2.1/src/test/org/apache/hadoop/tools/distcp2/util/TestDistCpUtils.java
+hadoop-1.2.1/src/test/org/apache/hadoop/tools/distcp2/util/TestRetriableCommand.java
+hadoop-1.2.1/src/test/org/apache/hadoop/tools/distcp2/util/TestThrottledInputStream.java
+hadoop-1.2.1/src/test/org/apache/hadoop/tools/rumen/ConcatenatedInputFilesDemuxer.java
+hadoop-1.2.1/src/test/org/apache/hadoop/tools/rumen/HistogramRawTestData.java
+hadoop-1.2.1/src/test/org/apache/hadoop/tools/rumen/TestConcurrentRead.java
+hadoop-1.2.1/src/test/org/apache/hadoop/tools/rumen/TestHistograms.java
+hadoop-1.2.1/src/test/org/apache/hadoop/tools/rumen/TestParsedLine.java
+hadoop-1.2.1/src/test/org/apache/hadoop/tools/rumen/TestPiecewiseLinearInterpolation.java
+hadoop-1.2.1/src/test/org/apache/hadoop/tools/rumen/TestRandomSeedGenerator.java
+hadoop-1.2.1/src/test/org/apache/hadoop/tools/rumen/TestRumenJobTraces.java
+hadoop-1.2.1/src/test/org/apache/hadoop/tools/rumen/TestZombieJob.java
+hadoop-1.2.1/src/test/org/apache/hadoop/util/DummyResourceCalculatorPlugin.java
+hadoop-1.2.1/src/test/org/apache/hadoop/util/TestClassUtil.java
+hadoop-1.2.1/src/test/org/apache/hadoop/util/TestCyclicIteration.java
+hadoop-1.2.1/src/test/org/apache/hadoop/util/TestGenericOptionsParser.java
+hadoop-1.2.1/src/test/org/apache/hadoop/util/TestGenericsUtil.java
+hadoop-1.2.1/src/test/org/apache/hadoop/util/TestIndexedSort.java
+hadoop-1.2.1/src/test/org/apache/hadoop/util/TestLinuxResourceCalculatorPlugin.java
+hadoop-1.2.1/src/test/org/apache/hadoop/util/TestProcfsBasedProcessTree.java
+hadoop-1.2.1/src/test/org/apache/hadoop/util/TestPureJavaCrc32.java
+hadoop-1.2.1/src/test/org/apache/hadoop/util/TestQueueProcessingStatistics.java
+hadoop-1.2.1/src/test/org/apache/hadoop/util/TestReflectionUtils.java
+hadoop-1.2.1/src/test/org/apache/hadoop/util/TestShell.java
+hadoop-1.2.1/src/test/org/apache/hadoop/util/TestStringUtils.java
+hadoop-1.2.1/src/test/smoke-tests
+hadoop-1.2.1/src/test/sslConfig.xml
+hadoop-1.2.1/src/test/system/aop/org/apache/hadoop/hdfs/HDFSPolicyProviderAspect.aj
+hadoop-1.2.1/src/test/system/aop/org/apache/hadoop/hdfs/server/datanode/DataNodeAspect.aj
+hadoop-1.2.1/src/test/system/aop/org/apache/hadoop/hdfs/server/namenode/NameNodeAspect.aj
+hadoop-1.2.1/src/test/system/aop/org/apache/hadoop/mapred/JTProtocolAspect.aj
+hadoop-1.2.1/src/test/system/aop/org/apache/hadoop/mapred/JobClientAspect.aj
+hadoop-1.2.1/src/test/system/aop/org/apache/hadoop/mapred/JobInProgressAspect.aj
+hadoop-1.2.1/src/test/system/aop/org/apache/hadoop/mapred/JobTrackerAspect.aj
+hadoop-1.2.1/src/test/system/aop/org/apache/hadoop/mapred/MapReducePolicyProviderAspect.aj
+hadoop-1.2.1/src/test/system/aop/org/apache/hadoop/mapred/StatisticsCollectorAspect.aj
+hadoop-1.2.1/src/test/system/aop/org/apache/hadoop/mapred/TaskAspect.aj
+hadoop-1.2.1/src/test/system/aop/org/apache/hadoop/mapred/TaskTrackerAspect.aj
+hadoop-1.2.1/src/test/system/aop/org/apache/hadoop/test/system/DaemonProtocolAspect.aj
+hadoop-1.2.1/src/test/system/c++/runAs/Makefile.in
+hadoop-1.2.1/src/test/system/c++/runAs/configure
+hadoop-1.2.1/src/test/system/c++/runAs/configure.ac
+hadoop-1.2.1/src/test/system/c++/runAs/main.c
+hadoop-1.2.1/src/test/system/c++/runAs/runAs.c
+hadoop-1.2.1/src/test/system/c++/runAs/runAs.h.in
+hadoop-1.2.1/src/test/system/conf/hadoop-policy-system-test.xml
+hadoop-1.2.1/src/test/system/conf/system-test.xml
+hadoop-1.2.1/src/test/system/java/org/apache/hadoop/hdfs/TestBalancer.java
+hadoop-1.2.1/src/test/system/java/org/apache/hadoop/hdfs/TestHL040.java
+hadoop-1.2.1/src/test/system/java/org/apache/hadoop/hdfs/test/system/DNClient.java
+hadoop-1.2.1/src/test/system/java/org/apache/hadoop/hdfs/test/system/DNProtocol.java
+hadoop-1.2.1/src/test/system/java/org/apache/hadoop/hdfs/test/system/HDFSCluster.java
+hadoop-1.2.1/src/test/system/java/org/apache/hadoop/hdfs/test/system/HDFSDaemonClient.java
+hadoop-1.2.1/src/test/system/java/org/apache/hadoop/hdfs/test/system/NNClient.java
+hadoop-1.2.1/src/test/system/java/org/apache/hadoop/hdfs/test/system/NNProtocol.java
+hadoop-1.2.1/src/test/system/java/org/apache/hadoop/mapred/HealthScriptHelper.java
+hadoop-1.2.1/src/test/system/java/org/apache/hadoop/mapred/HighRamJobHelper.java
+hadoop-1.2.1/src/test/system/java/org/apache/hadoop/mapred/JobInfoImpl.java
+hadoop-1.2.1/src/test/system/java/org/apache/hadoop/mapred/TTInfoImpl.java
+hadoop-1.2.1/src/test/system/java/org/apache/hadoop/mapred/TTTaskInfoImpl.java
+hadoop-1.2.1/src/test/system/java/org/apache/hadoop/mapred/TaskInfoImpl.java
+hadoop-1.2.1/src/test/system/java/org/apache/hadoop/mapred/TestCMExceptionDuringRunJob.java
+hadoop-1.2.1/src/test/system/java/org/apache/hadoop/mapred/TestCacheFileReferenceCount.java
+hadoop-1.2.1/src/test/system/java/org/apache/hadoop/mapred/TestChildsKillingOfMemoryExceedsTask.java
+hadoop-1.2.1/src/test/system/java/org/apache/hadoop/mapred/TestChildsKillingOfSuspendTask.java
+hadoop-1.2.1/src/test/system/java/org/apache/hadoop/mapred/TestCluster.java
+hadoop-1.2.1/src/test/system/java/org/apache/hadoop/mapred/TestControlledJob.java
+hadoop-1.2.1/src/test/system/java/org/apache/hadoop/mapred/TestCorruptedDiskJob.java
+hadoop-1.2.1/src/test/system/java/org/apache/hadoop/mapred/TestDistributedCacheModifiedFile.java
+hadoop-1.2.1/src/test/system/java/org/apache/hadoop/mapred/TestDistributedCachePrivateFile.java
+hadoop-1.2.1/src/test/system/java/org/apache/hadoop/mapred/TestDistributedCacheUnModifiedFile.java
+hadoop-1.2.1/src/test/system/java/org/apache/hadoop/mapred/TestFileOwner.java
+hadoop-1.2.1/src/test/system/java/org/apache/hadoop/mapred/TestHealthScriptError.java
+hadoop-1.2.1/src/test/system/java/org/apache/hadoop/mapred/TestHealthScriptPathError.java
+hadoop-1.2.1/src/test/system/java/org/apache/hadoop/mapred/TestHealthScriptTimeout.java
+hadoop-1.2.1/src/test/system/java/org/apache/hadoop/mapred/TestHiRamJobWithBlackListTT.java
+hadoop-1.2.1/src/test/system/java/org/apache/hadoop/mapred/TestJobCacheDirectoriesCleanUp.java
+hadoop-1.2.1/src/test/system/java/org/apache/hadoop/mapred/TestJobHistoryLocation.java
+hadoop-1.2.1/src/test/system/java/org/apache/hadoop/mapred/TestJobKill.java
+hadoop-1.2.1/src/test/system/java/org/apache/hadoop/mapred/TestJobSummary.java
+hadoop-1.2.1/src/test/system/java/org/apache/hadoop/mapred/TestLinuxTaskControllerOtherUser.java
+hadoop-1.2.1/src/test/system/java/org/apache/hadoop/mapred/TestLostTaskTracker.java
+hadoop-1.2.1/src/test/system/java/org/apache/hadoop/mapred/TestNodeDecommissioning.java
+hadoop-1.2.1/src/test/system/java/org/apache/hadoop/mapred/TestPushConfig.java
+hadoop-1.2.1/src/test/system/java/org/apache/hadoop/mapred/TestRetiredJobs.java
+hadoop-1.2.1/src/test/system/java/org/apache/hadoop/mapred/TestSortValidate.java
+hadoop-1.2.1/src/test/system/java/org/apache/hadoop/mapred/TestTaskChildsKilling.java
+hadoop-1.2.1/src/test/system/java/org/apache/hadoop/mapred/TestTaskController.java
+hadoop-1.2.1/src/test/system/java/org/apache/hadoop/mapred/TestTaskKilling.java
+hadoop-1.2.1/src/test/system/java/org/apache/hadoop/mapred/TestTaskOwner.java
+hadoop-1.2.1/src/test/system/java/org/apache/hadoop/mapred/TestTaskTrackerInfoSuccessfulFailedJobs.java
+hadoop-1.2.1/src/test/system/java/org/apache/hadoop/mapred/TestTaskTrackerInfoTTProcess.java
+hadoop-1.2.1/src/test/system/java/org/apache/hadoop/mapreduce/test/system/FinishTaskControlAction.java
+hadoop-1.2.1/src/test/system/java/org/apache/hadoop/mapreduce/test/system/JTClient.java
+hadoop-1.2.1/src/test/system/java/org/apache/hadoop/mapreduce/test/system/JTProtocol.java
+hadoop-1.2.1/src/test/system/java/org/apache/hadoop/mapreduce/test/system/JobInfo.java
+hadoop-1.2.1/src/test/system/java/org/apache/hadoop/mapreduce/test/system/MRCluster.java
+hadoop-1.2.1/src/test/system/java/org/apache/hadoop/mapreduce/test/system/MRDaemonClient.java
+hadoop-1.2.1/src/test/system/java/org/apache/hadoop/mapreduce/test/system/TTClient.java
+hadoop-1.2.1/src/test/system/java/org/apache/hadoop/mapreduce/test/system/TTInfo.java
+hadoop-1.2.1/src/test/system/java/org/apache/hadoop/mapreduce/test/system/TTProtocol.java
+hadoop-1.2.1/src/test/system/java/org/apache/hadoop/mapreduce/test/system/TTTaskInfo.java
+hadoop-1.2.1/src/test/system/java/org/apache/hadoop/mapreduce/test/system/TaskInfo.java
+hadoop-1.2.1/src/test/system/java/org/apache/hadoop/test/system/AbstractDaemonClient.java
+hadoop-1.2.1/src/test/system/java/org/apache/hadoop/test/system/AbstractDaemonCluster.java
+hadoop-1.2.1/src/test/system/java/org/apache/hadoop/test/system/ControlAction.java
+hadoop-1.2.1/src/test/system/java/org/apache/hadoop/test/system/DaemonProtocol.java
+hadoop-1.2.1/src/test/system/java/org/apache/hadoop/test/system/ProcessInfo.java
+hadoop-1.2.1/src/test/system/java/org/apache/hadoop/test/system/ProcessInfoImpl.java
+hadoop-1.2.1/src/test/system/java/org/apache/hadoop/test/system/ProxyUserDefinitions.java
+hadoop-1.2.1/src/test/system/java/org/apache/hadoop/test/system/process/ClusterProcessManager.java
+hadoop-1.2.1/src/test/system/java/org/apache/hadoop/test/system/process/HadoopDaemonRemoteCluster.java
+hadoop-1.2.1/src/test/system/java/org/apache/hadoop/test/system/process/MultiUserHadoopDaemonRemoteCluster.java
+hadoop-1.2.1/src/test/system/java/org/apache/hadoop/test/system/process/RemoteProcess.java
+hadoop-1.2.1/src/test/system/java/org/apache/hadoop/util/RemoteExecution.java
+hadoop-1.2.1/src/test/system/java/org/apache/hadoop/util/SSHRemoteExecution.java
+hadoop-1.2.1/src/test/system/java/shared/org/apache/hadoop/mapred/StatisticsCollectionHandler.java
+hadoop-1.2.1/src/test/system/scripts/healthScriptError
+hadoop-1.2.1/src/test/system/scripts/healthScriptTimeout
+hadoop-1.2.1/src/test/system/scripts/pushConfig.sh
+hadoop-1.2.1/src/test/system/validation/org/apache/hadoop/util/TestSSHRemoteExecution.java
+hadoop-1.2.1/src/test/test-patch.properties
+hadoop-1.2.1/src/test/testjar/ClassWordCount.java
+hadoop-1.2.1/src/test/testjar/CustomOutputCommitter.java
+hadoop-1.2.1/src/test/testjar/ExternalMapperReducer.java
+hadoop-1.2.1/src/test/testjar/ExternalWritable.java
+hadoop-1.2.1/src/test/testjar/GenerateTaskChildProcess.java
+hadoop-1.2.1/src/test/testjar/JobKillCommitter.java
+hadoop-1.2.1/src/test/testjar/UserNamePermission.java
+hadoop-1.2.1/src/test/testshell/ExternalMapReduce.java
+hadoop-1.2.1/src/test/tools/data/rumen/histogram-tests/gold-minimal.json
+hadoop-1.2.1/src/test/tools/data/rumen/histogram-tests/gold-one-value-many-repeats.json
+hadoop-1.2.1/src/test/tools/data/rumen/histogram-tests/gold-only-one-value.json
+hadoop-1.2.1/src/test/tools/data/rumen/histogram-tests/gold-three-values.json
+hadoop-1.2.1/src/test/tools/data/rumen/histogram-tests/input-minimal.json
+hadoop-1.2.1/src/test/tools/data/rumen/histogram-tests/input-one-value-many-repeats.json
+hadoop-1.2.1/src/test/tools/data/rumen/histogram-tests/input-only-one-value.json
+hadoop-1.2.1/src/test/tools/data/rumen/histogram-tests/input-three-values.json
+hadoop-1.2.1/src/test/tools/data/rumen/small-trace-test/counters-format-test-logs/megacluster.megacorp.com_1265616107882_job_201002080801_40864_conf.xml
+hadoop-1.2.1/src/test/tools/data/rumen/small-trace-test/counters-format-test-logs/megacluster.megacorp.com_1265616107882_job_201002080801_40864_job_name-DAILY%2F20100210%5D.gz
+hadoop-1.2.1/src/test/tools/data/rumen/small-trace-test/counters-format-test-logs/megacluster.megacorp.com_1265616107882_job_201002080801_50510_conf.xml
+hadoop-1.2.1/src/test/tools/data/rumen/small-trace-test/counters-format-test-logs/megacluster.megacorp.com_1265616107882_job_201002080801_50510_job_name-DAILY%2F20100208%5D.gz
+hadoop-1.2.1/src/test/tools/data/rumen/small-trace-test/counters-test-trace.json.gz
+hadoop-1.2.1/src/test/tools/data/rumen/small-trace-test/dispatch-sample-v20-jt-log.gz
+hadoop-1.2.1/src/test/tools/data/rumen/small-trace-test/dispatch-topology-output.json.gz
+hadoop-1.2.1/src/test/tools/data/rumen/small-trace-test/dispatch-trace-output.json.gz
+hadoop-1.2.1/src/test/tools/data/rumen/small-trace-test/folder-input-trace.json.gz
+hadoop-1.2.1/src/test/tools/data/rumen/small-trace-test/goldFoldedTrace.json.gz
+hadoop-1.2.1/src/test/tools/data/rumen/small-trace-test/job-tracker-logs-topology-output
+hadoop-1.2.1/src/test/tools/data/rumen/small-trace-test/job-tracker-logs-trace-output.gz
+hadoop-1.2.1/src/test/tools/data/rumen/small-trace-test/sample-conf.file.xml
+hadoop-1.2.1/src/test/tools/data/rumen/small-trace-test/sample-job-tracker-logs.gz
+hadoop-1.2.1/src/test/tools/data/rumen/small-trace-test/truncated-job-tracker-log
+hadoop-1.2.1/src/test/tools/data/rumen/small-trace-test/truncated-topology-output
+hadoop-1.2.1/src/test/tools/data/rumen/small-trace-test/truncated-trace-output
+hadoop-1.2.1/src/test/tools/data/rumen/small-trace-test/v20-resource-usage-log.gz
+hadoop-1.2.1/src/test/tools/data/rumen/small-trace-test/v20-single-input-log-event-classes.text.gz
+hadoop-1.2.1/src/test/tools/data/rumen/small-trace-test/v20-single-input-log.gz
+hadoop-1.2.1/src/test/tools/data/rumen/zombie/input-topology.json
+hadoop-1.2.1/src/test/tools/data/rumen/zombie/input-trace.json
+hadoop-1.2.1/src/tools/distcp-default.xml
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/DistCh.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/DistCp.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/DistCp_Counter.properties
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/DistTool.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/HadoopArchives.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/Logalyzer.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/distcp2/CopyListing.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/distcp2/DistCp.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/distcp2/DistCpConstants.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/distcp2/DistCpOptionSwitch.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/distcp2/DistCpOptions.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/distcp2/FileBasedCopyListing.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/distcp2/GlobbedCopyListing.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/distcp2/OptionsParser.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/distcp2/SimpleCopyListing.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/distcp2/mapred/CopyCommitter.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/distcp2/mapred/CopyMapper.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/distcp2/mapred/CopyOutputFormat.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/distcp2/mapred/RetriableDirectoryCreateCommand.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/distcp2/mapred/RetriableFileCopyCommand.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/distcp2/mapred/UniformSizeInputFormat.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/distcp2/mapred/lib/DynamicInputChunk.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/distcp2/mapred/lib/DynamicInputFormat.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/distcp2/mapred/lib/DynamicRecordReader.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/distcp2/util/DistCpUtils.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/distcp2/util/RetriableCommand.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/distcp2/util/ThrottledInputStream.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/AbstractClusterStory.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/CDFPiecewiseLinearRandomGenerator.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/CDFRandomGenerator.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/ClusterStory.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/ClusterTopologyReader.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/DeepCompare.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/DeepInequalityException.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/DefaultInputDemuxer.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/DefaultOutputter.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/DeskewedJobTraceReader.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/EventType.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/Hadoop20JHParser.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/HadoopLogsAnalyzer.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/Histogram.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/HistoryEvent.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/HistoryEventEmitter.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/InputDemuxer.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/JhCounter.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/JhCounterGroup.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/JhCounters.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/Job20LineHistoryEventEmitter.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/JobBuilder.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/JobConfPropertyNames.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/JobConfigurationParser.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/JobFinishedEvent.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/JobHistoryParser.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/JobHistoryParserFactory.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/JobHistoryUtils.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/JobInfoChangeEvent.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/JobInitedEvent.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/JobPriorityChangeEvent.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/JobStatusChangedEvent.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/JobStory.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/JobStoryProducer.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/JobSubmittedEvent.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/JobTraceReader.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/JobUnsuccessfulCompletionEvent.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/JsonObjectMapperParser.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/JsonObjectMapperWriter.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/LogRecordType.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/LoggedDiscreteCDF.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/LoggedJob.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/LoggedLocation.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/LoggedNetworkTopology.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/LoggedSingleRelativeRanking.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/LoggedTask.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/LoggedTaskAttempt.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/MachineNode.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/MapAttempt20LineHistoryEventEmitter.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/MapAttemptFinishedEvent.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/MapTaskAttemptInfo.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/Node.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/Outputter.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/Pair.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/ParsedConfigFile.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/ParsedHost.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/ParsedJob.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/ParsedLine.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/ParsedTask.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/ParsedTaskAttempt.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/PossiblyDecompressedInputStream.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/Pre21JobHistoryConstants.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/RackNode.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/RandomSeedGenerator.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/ReduceAttempt20LineHistoryEventEmitter.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/ReduceAttemptFinishedEvent.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/ReduceTaskAttemptInfo.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/ResourceUsageMetrics.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/RewindableInputStream.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/SingleEventEmitter.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/Task20LineHistoryEventEmitter.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/TaskAttempt20LineEventEmitter.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/TaskAttemptFinishedEvent.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/TaskAttemptInfo.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/TaskAttemptStartedEvent.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/TaskAttemptUnsuccessfulCompletionEvent.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/TaskFailedEvent.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/TaskFinishedEvent.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/TaskInfo.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/TaskStartedEvent.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/TaskUpdatedEvent.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/TopologyBuilder.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/TraceBuilder.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/TreePath.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/Version20LogInterfaceUtils.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/ZombieCluster.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/ZombieJob.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/ZombieJobProducer.java
+hadoop-1.2.1/src/tools/org/apache/hadoop/tools/rumen/package-info.java
+hadoop-1.2.1/src/webapps/datanode/browseBlock.jsp
+hadoop-1.2.1/src/webapps/datanode/browseDirectory.jsp
+hadoop-1.2.1/src/webapps/datanode/tail.jsp
+hadoop-1.2.1/src/webapps/hdfs/corrupt_files.jsp
+hadoop-1.2.1/src/webapps/hdfs/dfshealth.jsp
+hadoop-1.2.1/src/webapps/hdfs/dfsnodelist.jsp
+hadoop-1.2.1/src/webapps/hdfs/index.html
+hadoop-1.2.1/src/webapps/hdfs/nn_browsedfscontent.jsp
+hadoop-1.2.1/src/webapps/history/analysejobhistory.jsp
+hadoop-1.2.1/src/webapps/history/job_authorization_error.jsp
+hadoop-1.2.1/src/webapps/history/jobconf_history.jsp
+hadoop-1.2.1/src/webapps/history/jobdetailshistory.jsp
+hadoop-1.2.1/src/webapps/history/jobhistoryhome.jsp
+hadoop-1.2.1/src/webapps/history/jobtaskshistory.jsp
+hadoop-1.2.1/src/webapps/history/legacyjobhistory.jsp
+hadoop-1.2.1/src/webapps/history/loadhistory.jsp
+hadoop-1.2.1/src/webapps/history/taskdetailshistory.jsp
+hadoop-1.2.1/src/webapps/history/taskstatshistory.jsp
+hadoop-1.2.1/src/webapps/job/gethistory.jsp
+hadoop-1.2.1/src/webapps/job/index.html
+hadoop-1.2.1/src/webapps/job/job_authorization_error.jsp
+hadoop-1.2.1/src/webapps/job/jobblacklistedtrackers.jsp
+hadoop-1.2.1/src/webapps/job/jobconf.jsp
+hadoop-1.2.1/src/webapps/job/jobdetails.jsp
+hadoop-1.2.1/src/webapps/job/jobfailures.jsp
+hadoop-1.2.1/src/webapps/job/jobhistory.jsp
+hadoop-1.2.1/src/webapps/job/jobqueue_details.jsp
+hadoop-1.2.1/src/webapps/job/jobtasks.jsp
+hadoop-1.2.1/src/webapps/job/jobtracker.jsp
+hadoop-1.2.1/src/webapps/job/machines.jsp
+hadoop-1.2.1/src/webapps/job/taskdetails.jsp
+hadoop-1.2.1/src/webapps/job/taskstats.jsp
+hadoop-1.2.1/src/webapps/secondary/index.html
+hadoop-1.2.1/src/webapps/secondary/status.jsp
+hadoop-1.2.1/src/webapps/static/hadoop-logo.jpg
+hadoop-1.2.1/src/webapps/static/hadoop.css
+hadoop-1.2.1/src/webapps/static/jobconf.xsl
+hadoop-1.2.1/src/webapps/static/jobtracker.js
+hadoop-1.2.1/src/webapps/static/sorttable.js
+hadoop-1.2.1/src/webapps/task/index.html
+hadoop-1.2.1/src/webapps/task/tasktracker.jsp
+hadoop-1.2.1/webapps/datanode/WEB-INF/web.xml
+hadoop-1.2.1/webapps/hdfs/WEB-INF/web.xml
+hadoop-1.2.1/webapps/hdfs/index.html
+hadoop-1.2.1/webapps/history/WEB-INF/web.xml
+hadoop-1.2.1/webapps/job/WEB-INF/web.xml
+hadoop-1.2.1/webapps/job/analysejobhistory.jsp
+hadoop-1.2.1/webapps/job/gethistory.jsp
+hadoop-1.2.1/webapps/job/index.html
+hadoop-1.2.1/webapps/job/job_authorization_error.jsp
+hadoop-1.2.1/webapps/job/jobblacklistedtrackers.jsp
+hadoop-1.2.1/webapps/job/jobconf.jsp
+hadoop-1.2.1/webapps/job/jobconf_history.jsp
+hadoop-1.2.1/webapps/job/jobdetails.jsp
+hadoop-1.2.1/webapps/job/jobdetailshistory.jsp
+hadoop-1.2.1/webapps/job/jobfailures.jsp
+hadoop-1.2.1/webapps/job/jobhistory.jsp
+hadoop-1.2.1/webapps/job/jobhistoryhome.jsp
+hadoop-1.2.1/webapps/job/jobqueue_details.jsp
+hadoop-1.2.1/webapps/job/jobtasks.jsp
+hadoop-1.2.1/webapps/job/jobtaskshistory.jsp
+hadoop-1.2.1/webapps/job/jobtracker.jsp
+hadoop-1.2.1/webapps/job/legacyjobhistory.jsp
+hadoop-1.2.1/webapps/job/loadhistory.jsp
+hadoop-1.2.1/webapps/job/machines.jsp
+hadoop-1.2.1/webapps/job/taskdetails.jsp
+hadoop-1.2.1/webapps/job/taskdetailshistory.jsp
+hadoop-1.2.1/webapps/job/taskstats.jsp
+hadoop-1.2.1/webapps/job/taskstatshistory.jsp
+hadoop-1.2.1/webapps/secondary/WEB-INF/web.xml
+hadoop-1.2.1/webapps/secondary/index.html
+hadoop-1.2.1/webapps/static/hadoop-logo.jpg
+hadoop-1.2.1/webapps/static/hadoop.css
+hadoop-1.2.1/webapps/static/jobconf.xsl
+hadoop-1.2.1/webapps/static/jobtracker.js
+hadoop-1.2.1/webapps/static/sorttable.js
+hadoop-1.2.1/webapps/task/WEB-INF/web.xml
+hadoop-1.2.1/webapps/task/index.html
+hadoop-1.2.1/src/contrib/ec2/bin/image/
+hadoop-1.2.1/bin/hadoop
+hadoop-1.2.1/bin/hadoop-config.sh
+hadoop-1.2.1/bin/hadoop-daemon.sh
+hadoop-1.2.1/bin/hadoop-daemons.sh
+hadoop-1.2.1/bin/rcc
+hadoop-1.2.1/bin/slaves.sh
+hadoop-1.2.1/bin/start-all.sh
+hadoop-1.2.1/bin/start-balancer.sh
+hadoop-1.2.1/bin/start-dfs.sh
+hadoop-1.2.1/bin/start-jobhistoryserver.sh
+hadoop-1.2.1/bin/start-mapred.sh
+hadoop-1.2.1/bin/stop-all.sh
+hadoop-1.2.1/bin/stop-balancer.sh
+hadoop-1.2.1/bin/stop-dfs.sh
+hadoop-1.2.1/bin/stop-jobhistoryserver.sh
+hadoop-1.2.1/bin/stop-mapred.sh
+hadoop-1.2.1/bin/task-controller
+hadoop-1.2.1/contrib/hdfsproxy/bin/hdfsproxy
+hadoop-1.2.1/contrib/hdfsproxy/bin/hdfsproxy-config.sh
+hadoop-1.2.1/contrib/hdfsproxy/bin/hdfsproxy-daemon.sh
+hadoop-1.2.1/contrib/hdfsproxy/bin/hdfsproxy-daemons.sh
+hadoop-1.2.1/contrib/hdfsproxy/bin/hdfsproxy-slaves.sh
+hadoop-1.2.1/contrib/hdfsproxy/bin/start-hdfsproxy.sh
+hadoop-1.2.1/contrib/hdfsproxy/bin/stop-hdfsproxy.sh
+hadoop-1.2.1/contrib/hod/bin/VERSION
+hadoop-1.2.1/contrib/hod/bin/checknodes
+hadoop-1.2.1/contrib/hod/bin/hod
+hadoop-1.2.1/contrib/hod/bin/hodcleanup
+hadoop-1.2.1/contrib/hod/bin/hodring
+hadoop-1.2.1/contrib/hod/bin/ringmaster
+hadoop-1.2.1/contrib/hod/bin/verify-account
+hadoop-1.2.1/contrib/vaidya/bin/vaidya.sh
+hadoop-1.2.1/libexec/hadoop-config.sh
+hadoop-1.2.1/libexec/jsvc.amd64
+hadoop-1.2.1/sbin/hadoop-create-user.sh
+hadoop-1.2.1/sbin/hadoop-setup-applications.sh
+hadoop-1.2.1/sbin/hadoop-setup-conf.sh
+hadoop-1.2.1/sbin/hadoop-setup-hdfs.sh
+hadoop-1.2.1/sbin/hadoop-setup-single-node.sh
+hadoop-1.2.1/sbin/hadoop-validate-setup.sh
+hadoop-1.2.1/sbin/update-hadoop-env.sh
+hadoop-1.2.1/src/contrib/ec2/bin/cmd-hadoop-cluster
+hadoop-1.2.1/src/contrib/ec2/bin/create-hadoop-image
+hadoop-1.2.1/src/contrib/ec2/bin/delete-hadoop-cluster
+hadoop-1.2.1/src/contrib/ec2/bin/hadoop-ec2
+hadoop-1.2.1/src/contrib/ec2/bin/hadoop-ec2-env.sh
+hadoop-1.2.1/src/contrib/ec2/bin/hadoop-ec2-init-remote.sh
+hadoop-1.2.1/src/contrib/ec2/bin/image/create-hadoop-image-remote
+hadoop-1.2.1/src/contrib/ec2/bin/image/ec2-run-user-data
+hadoop-1.2.1/src/contrib/ec2/bin/launch-hadoop-cluster
+hadoop-1.2.1/src/contrib/ec2/bin/launch-hadoop-master
+hadoop-1.2.1/src/contrib/ec2/bin/launch-hadoop-slaves
+hadoop-1.2.1/src/contrib/ec2/bin/list-hadoop-clusters
+hadoop-1.2.1/src/contrib/ec2/bin/terminate-hadoop-cluster
+hadoop@hadoopserver:~$
+hadoop@hadoopserver:~$ sudo cp -r hadoop-1.2.1 /usr/local/hadoop
+[sudo] password for hadoop:
+hadoop@hadoopserver:~$
+hadoop@hadoopserver:~$ vi .bashrc
+hadoop@hadoopserver:~$
+hadoop@hadoopserver:~$ sudo vi /usr/local/hadoop/hadoop-
+hadoop-ant-1.2.1.jar          hadoop-minicluster-1.2.1.jar
+hadoop-client-1.2.1.jar       hadoop-test-1.2.1.jar
+hadoop-core-1.2.1.jar         hadoop-tools-1.2.1.jar
+hadoop-examples-1.2.1.jar
+hadoop@hadoopserver:~$ sudo vi /usr/local/hadoop/hadoop-
+hadoop-ant-1.2.1.jar          hadoop-minicluster-1.2.1.jar
+hadoop-client-1.2.1.jar       hadoop-test-1.2.1.jar
+hadoop-core-1.2.1.jar         hadoop-tools-1.2.1.jar
+hadoop-examples-1.2.1.jar
+hadoop@hadoopserver:~$ sudo vi /usr/local/hadoop/con
+conf/    contrib/
+hadoop@hadoopserver:~$ sudo vi /usr/local/hadoop/conf/hadoop-env.sh
+hadoop@hadoopserver:~$ ls /usr/lib/jvm/
+java-1.6.0-openjdk-i386  java-6-openjdk-i386
+java-6-openjdk-common    java-7-openjdk-i386
+hadoop@hadoopserver:~$ ls /usr/lib/jvm/java-6-openjdk-i386/
+ASSEMBLY_EXCEPTION  docs     jre  man      THIRD_PARTY_README
+bin                 include  lib  src.zip
+hadoop@hadoopserver:~$ sudo vi /usr/local/hadoop/conf/hadoop-env.sh
+hadoop@hadoopserver:~$ javac
+Usage: javac <options> <source files>
+where possible options include:
+  -g                         Generate all debugging info
+  -g:none                    Generate no debugging info
+  -g:{lines,vars,source}     Generate only some debugging info
+  -nowarn                    Generate no warnings
+  -verbose                   Output messages about what the compiler is doing
+  -deprecation               Output source locations where deprecated APIs are used
+  -classpath <path>          Specify where to find user class files and annotation processors
+  -cp <path>                 Specify where to find user class files and annotation processors
+  -sourcepath <path>         Specify where to find input source files
+  -bootclasspath <path>      Override location of bootstrap class files
+  -extdirs <dirs>            Override location of installed extensions
+  -endorseddirs <dirs>       Override location of endorsed standards path
+  -proc:{none,only}          Control whether annotation processing and/or compilation is done.
+  -processor <class1>[,<class2>,<class3>...]Names of the annotation processors to run; bypasses default discovery process
+  -processorpath <path>      Specify where to find annotation processors
+  -d <directory>             Specify where to place generated class files
+  -s <directory>             Specify where to place generated source files
+  -implicit:{none,class}     Specify whether or not to generate class files for implicitly referenced files
+  -encoding <encoding>       Specify character encoding used by source files
+  -source <release>          Provide source compatibility with specified release
+  -target <release>          Generate class files for specific VM version
+  -version                   Version information
+  -help                      Print a synopsis of standard options
+  -Akey[=value]              Options to pass to annotation processors
+  -X                         Print a synopsis of nonstandard options
+  -J<flag>                   Pass <flag> directly to the runtime system
+  -Werror                    Terminate compilation if warnings occur
+
+hadoop@hadoopserver:~$ exec bash
+hadoop@hadoopserver:~$ st
+start                      status
+start-all.sh               stdbuf
+start-balancer.sh          stop
+start-dfs.sh               stop-all.sh
+start-jobhistoryserver.sh  stop-balancer.sh
+start-mapred.sh            stop-dfs.sh
+startpar                   stop-jobhistoryserver.sh
+start-stop-daemon          stop-mapred.sh
+stat                       strace
+static-sh                  stty
+hadoop@hadoopserver:~$ start-all.sh
+mkdir: cannot create directory `/usr/local/hadoop/libexec/../logs': Permission denied
+chown: cannot access `/usr/local/hadoop/libexec/../logs': No such file or directory
+starting namenode, logging to /usr/local/hadoop/libexec/../logs/hadoop-hadoop-namenode-hadoopserver.out
+/usr/local/hadoop/bin/hadoop-daemon.sh: line 137: /usr/local/hadoop/libexec/../logs/hadoop-hadoop-namenode-hadoopserver.out: No such file or directory
+head: cannot open `/usr/local/hadoop/libexec/../logs/hadoop-hadoop-namenode-hadoopserver.out' for reading: No such file or directory
+/usr/local/hadoop/bin/hadoop-daemon.sh: line 147: /usr/local/hadoop/libexec/../logs/hadoop-hadoop-namenode-hadoopserver.out: No such file or directory
+/usr/local/hadoop/bin/hadoop-daemon.sh: line 148: /usr/local/hadoop/libexec/../logs/hadoop-hadoop-namenode-hadoopserver.out: No such file or directory
+The authenticity of host 'localhost (127.0.0.1)' can't be established.
+ECDSA key fingerprint is 30:d4:f2:77:5d:ae:84:05:c6:76:53:0d:cf:eb:ff:24.
+Are you sure you want to continue connecting (yes/no)? no
+localhost: Host key verification failed.
+The authenticity of host 'localhost (127.0.0.1)' can't be established.
+ECDSA key fingerprint is 30:d4:f2:77:5d:ae:84:05:c6:76:53:0d:cf:eb:ff:24.
+Are you sure you want to continue connecting (yes/no)? no
+localhost: Host key verification failed.
+mkdir: cannot create directory `/usr/local/hadoop/libexec/../logs': Permission denied
+chown: cannot access `/usr/local/hadoop/libexec/../logs': No such file or directory
+starting jobtracker, logging to /usr/local/hadoop/libexec/../logs/hadoop-hadoop-jobtracker-hadoopserver.out
+/usr/local/hadoop/bin/hadoop-daemon.sh: line 137: /usr/local/hadoop/libexec/../logs/hadoop-hadoop-jobtracker-hadoopserver.out: No such file or directory
+head: cannot open `/usr/local/hadoop/libexec/../logs/hadoop-hadoop-jobtracker-hadoopserver.out' for reading: No such file or directory
+/usr/local/hadoop/bin/hadoop-daemon.sh: line 147: /usr/local/hadoop/libexec/../logs/hadoop-hadoop-jobtracker-hadoopserver.out: No such file or directory
+/usr/local/hadoop/bin/hadoop-daemon.sh: line 148: /usr/local/hadoop/libexec/../logs/hadoop-hadoop-jobtracker-hadoopserver.out: No such file or directory
+The authenticity of host 'localhost (127.0.0.1)' can't be established.
+ECDSA key fingerprint is 30:d4:f2:77:5d:ae:84:05:c6:76:53:0d:cf:eb:ff:24.
+Are you sure you want to continue connecting (yes/no)?
+localhost: Host key verification failed.
+hadoop@hadoopserver:~$
+hadoop@hadoopserver:~$
+hadoop@hadoopserver:~$ sudo chown hadoop /usr/local/hadoop/
+hadoop@hadoopserver:~$ sudo chown hadoop /usr/local/hadoop/lib
+hadoop@hadoopserver:~$ sudo chown hadoop /usr/local/hadoop/bin/
+hadoop@hadoopserver:~$ sudo chown hadoop /usr/local/hadoop/conf/
+hadoop@hadoopserver:~$
+hadoop@hadoopserver:~$ start-all.sh
+starting namenode, logging to /usr/local/hadoop/libexec/../logs/hadoop-hadoop-namenode-hadoopserver.out
+The authenticity of host 'localhost (127.0.0.1)' can't be established.
+ECDSA key fingerprint is 30:d4:f2:77:5d:ae:84:05:c6:76:53:0d:cf:eb:ff:24.
+Are you sure you want to continue connecting (yes/no)? yes
+localhost: Warning: Permanently added 'localhost' (ECDSA) to the list of known hosts.
+hadoop@localhost's password:
+localhost: Permission denied, please try again.
+hadoop@localhost's password:
+localhost: starting datanode, logging to /usr/local/hadoop/libexec/../logs/hadoop-hadoop-datanode-hadoopserver.out
+hadoop@localhost's password:
+localhost: starting secondarynamenode, logging to /usr/local/hadoop/libexec/../logs/hadoop-hadoop-secondarynamenode-hadoopserver.out
+localhost: Exception in thread "main" java.lang.IllegalArgumentException: Does not contain a valid host:port authority: file:///
+localhost:      at org.apache.hadoop.net.NetUtils.createSocketAddr(NetUtils.java:164)
+localhost:      at org.apache.hadoop.hdfs.server.namenode.NameNode.getAddress(NameNode.java:212)
+localhost:      at org.apache.hadoop.hdfs.server.namenode.NameNode.getAddress(NameNode.java:244)
+localhost:      at org.apache.hadoop.hdfs.server.namenode.NameNode.getServiceAddress(NameNode.java:236)
+localhost:      at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.initialize(SecondaryNameNode.java:194)
+localhost:      at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.<init>(SecondaryNameNode.java:150)
+localhost:      at org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode.main(SecondaryNameNode.java:676)
+starting jobtracker, logging to /usr/local/hadoop/libexec/../logs/hadoop-hadoop-jobtracker-hadoopserver.out
+hadoop@localhost's password:
+localhost: starting tasktracker, logging to /usr/local/hadoop/libexec/../logs/hadoop-hadoop-tasktracker-hadoopserver.out
+hadoop@hadoopserver:~$
+hadoop@hadoopserver:~$ jps
+7897 Jps
+hadoop@hadoopserver:~$ jps
+7906 Jps
+hadoop@hadoopserver:~$ vi resume.txt
+hadoop@hadoopserver:~$ hadoop jar /usr/local/hadoop/hadoop-examples-1.2.1.jar wordcount /home/hadoop/resume.txt /home/hadoop/output
+15/03/27 18:59:50 INFO util.NativeCodeLoader: Loaded the native-hadoop library
+15/03/27 18:59:50 INFO input.FileInputFormat: Total input paths to process : 1
+15/03/27 18:59:50 WARN snappy.LoadSnappy: Snappy native library not loaded
+15/03/27 18:59:51 INFO mapred.JobClient: Running job: job_local1461732046_0001
+15/03/27 18:59:51 INFO mapred.LocalJobRunner: Waiting for map tasks
+15/03/27 18:59:51 INFO mapred.LocalJobRunner: Starting task: attempt_local1461732046_0001_m_000000_0
+15/03/27 18:59:51 INFO util.ProcessTree: setsid exited with exit code 0
+15/03/27 18:59:51 INFO mapred.Task:  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@13d9906
+15/03/27 18:59:51 INFO mapred.MapTask: Processing split: file:/home/hadoop/resume.txt:0+266
+15/03/27 18:59:51 INFO mapred.MapTask: io.sort.mb = 100
+15/03/27 18:59:51 INFO mapred.MapTask: data buffer = 79691776/99614720
+15/03/27 18:59:51 INFO mapred.MapTask: record buffer = 262144/327680
+15/03/27 18:59:51 INFO mapred.MapTask: Starting flush of map output
+15/03/27 18:59:51 INFO mapred.MapTask: Finished spill 0
+15/03/27 18:59:51 INFO mapred.Task: Task:attempt_local1461732046_0001_m_000000_0 is done. And is in the process of commiting
+15/03/27 18:59:51 INFO mapred.LocalJobRunner:
+15/03/27 18:59:51 INFO mapred.Task: Task 'attempt_local1461732046_0001_m_000000_0' done.
+15/03/27 18:59:51 INFO mapred.LocalJobRunner: Finishing task: attempt_local1461732046_0001_m_000000_0
+15/03/27 18:59:51 INFO mapred.LocalJobRunner: Map task executor complete.
+15/03/27 18:59:51 INFO mapred.Task:  Using ResourceCalculatorPlugin : org.apache.hadoop.util.LinuxResourceCalculatorPlugin@5cbebb
+15/03/27 18:59:51 INFO mapred.LocalJobRunner:
+15/03/27 18:59:51 INFO mapred.Merger: Merging 1 sorted segments
+15/03/27 18:59:51 INFO mapred.Merger: Down to the last merge-pass, with 1 segments left of total size: 481 bytes
+15/03/27 18:59:51 INFO mapred.LocalJobRunner:
+15/03/27 18:59:51 INFO mapred.Task: Task:attempt_local1461732046_0001_r_000000_0 is done. And is in the process of commiting
+15/03/27 18:59:51 INFO mapred.LocalJobRunner:
+15/03/27 18:59:51 INFO mapred.Task: Task attempt_local1461732046_0001_r_000000_0 is allowed to commit now
+15/03/27 18:59:51 INFO output.FileOutputCommitter: Saved output of task 'attempt_local1461732046_0001_r_000000_0' to /home/hadoop/output
+15/03/27 18:59:51 INFO mapred.LocalJobRunner: reduce > reduce
+15/03/27 18:59:51 INFO mapred.Task: Task 'attempt_local1461732046_0001_r_000000_0' done.
+15/03/27 18:59:52 INFO mapred.JobClient:  map 100% reduce 100%
+15/03/27 18:59:52 INFO mapred.JobClient: Job complete: job_local1461732046_0001
+15/03/27 18:59:52 INFO mapred.JobClient: Counters: 20
+15/03/27 18:59:52 INFO mapred.JobClient:   File Output Format Counters
+15/03/27 18:59:52 INFO mapred.JobClient:     Bytes Written=339
+15/03/27 18:59:52 INFO mapred.JobClient:   File Input Format Counters
+15/03/27 18:59:52 INFO mapred.JobClient:     Bytes Read=266
+15/03/27 18:59:52 INFO mapred.JobClient:   FileSystemCounters
+15/03/27 18:59:52 INFO mapred.JobClient:     FILE_BYTES_READ=286767
+15/03/27 18:59:52 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=392017
+15/03/27 18:59:52 INFO mapred.JobClient:   Map-Reduce Framework
+15/03/27 18:59:52 INFO mapred.JobClient:     Map output materialized bytes=485
+15/03/27 18:59:52 INFO mapred.JobClient:     Map input records=7
+15/03/27 18:59:52 INFO mapred.JobClient:     Reduce shuffle bytes=0
+15/03/27 18:59:52 INFO mapred.JobClient:     Spilled Records=76
+15/03/27 18:59:52 INFO mapred.JobClient:     Map output bytes=445
+15/03/27 18:59:52 INFO mapred.JobClient:     CPU time spent (ms)=0
+15/03/27 18:59:52 INFO mapred.JobClient:     Total committed heap usage (bytes)=321003520
+15/03/27 18:59:52 INFO mapred.JobClient:     Combine input records=45
+15/03/27 18:59:52 INFO mapred.JobClient:     SPLIT_RAW_BYTES=93
+15/03/27 18:59:52 INFO mapred.JobClient:     Reduce input records=38
+15/03/27 18:59:52 INFO mapred.JobClient:     Reduce input groups=38
+15/03/27 18:59:52 INFO mapred.JobClient:     Combine output records=38
+15/03/27 18:59:52 INFO mapred.JobClient:     Physical memory (bytes) snapshot=0
+15/03/27 18:59:52 INFO mapred.JobClient:     Reduce output records=38
+15/03/27 18:59:52 INFO mapred.JobClient:     Virtual memory (bytes) snapshot=0
+15/03/27 18:59:52 INFO mapred.JobClient:     Map output records=45
+hadoop@hadoopserver:~$ ls output/
+part-r-00000  _SUCCESS
+hadoop@hadoopserver:~$ cat output/part-r-00000
+&       3
+,       1
+1       1
+5       1
+:       6
+Experience      1
+Flume.  1
+Ganapathy       1
+HBASE,  1
+Hadoop  1
+Hariharan       1
+Hibernate,      1
+Hive,   1
+J2ee,   1
+JPA,    1
+JSF2    1
+Java,   1
+Last    1
+MCA     1
+MySQL   1
+Name    1
+Oracle, 1
+Pig,    1
+Qualification   1
+Specilization   1
+Spring  1
+Sqoop   1
+Struts2,        1
+Technology      1
+Zookeeper,      1
+as      1
+component       1
+eco     1
+it's    1
+name    1
+such    1
+system  1
+years   1
+hadoop@hadoopserver:~$
+hadoop@hadoopserver:~$
+hadoop@hadoopserver:~$
+hadoop@hadoopserver:~$
+hadoop@hadoopserver:~$ vi /usr/local/hadoop/conf/core-site.xml
+hadoop@hadoopserver:~$ vi /usr/local/hadoop/conf/mapred-site.xml
+hadoop@hadoopserver:~$ vi /usr/local/hadoop/conf/masters
+hadoop@hadoopserver:~$ vi /usr/local/hadoop/conf/slaves
+hadoop@hadoopserver:~$
+hadoop@hadoopserver:~$ cat /usr/local/hadoop/conf/core-site.xml
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<!-- Put site-specific property overrides in this file. -->
+
+<configuration>
+
+<property>
+<name>fs.default.name</name>
+<value>hdfs://192.168.81.149:11110</value>
+</property>
+
+<property>
+<name>hadoop.tmp.dir</name>
+<value>/usr/local/haridfs</value>
+</property>
+
+</configuration>
+hadoop@hadoopserver:~$ cat /usr/local/hadoop/conf/mapred-site.xml
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<!-- Put site-specific property overrides in this file. -->
+
+<configuration>
+
+<property>
+<name>mapred.job.tracker</name>
+<value>192.168.81.149:11111</value>
+</property>
+
+</configuration>
+hadoop@hadoopserver:~$ cat /usr/local/hadoop/conf/masters
+192.168.81.149
+hadoop@hadoopserver:~$ cat /usr/local/hadoop/conf/slaves
+192.168.81.149
+hadoop@hadoopserver:~$ sudo mkdir /usr/local/haridfs
+hadoop@hadoopserver:~$ sudo chown hadoop /usr/local/ha
+hadoop/  haridfs/
+hadoop@hadoopserver:~$ sudo chown hadoop /usr/local/haridfs/
+hadoop@hadoopserver:~$
+hadoop@hadoopserver:~$ stop-all.sh
+no jobtracker to stop
+The authenticity of host '192.168.81.149 (192.168.81.149)' can't be established.
+ECDSA key fingerprint is 30:d4:f2:77:5d:ae:84:05:c6:76:53:0d:cf:eb:ff:24.
+Are you sure you want to continue connecting (yes/no)? yes
+192.168.81.149: Warning: Permanently added '192.168.81.149' (ECDSA) to the list of known hosts.
+hadoop@192.168.81.149's password:
+192.168.81.149: no tasktracker to stop
+no namenode to stop
+hadoop@192.168.81.149's password:
+192.168.81.149: no datanode to stop
+hadoop@192.168.81.149's password:
+192.168.81.149: no secondarynamenode to stop
+hadoop@hadoopserver:~$ jps
+8787 Jps
+hadoop@hadoopserver:~$
+hadoop@hadoopserver:~$ hadoop namenode -format
+15/03/27 19:10:03 INFO namenode.NameNode: STARTUP_MSG:
+/************************************************************
+STARTUP_MSG: Starting NameNode
+STARTUP_MSG:   host = hadoopserver/127.0.1.1
+STARTUP_MSG:   args = [-format]
+STARTUP_MSG:   version = 1.2.1
+STARTUP_MSG:   build = https://svn.apache.org/repos/asf/hadoop/common/branches/branch-1.2 -r 1503152; compiled by 'mattf' on Mon Jul 22 15:23:09 PDT 2013
+STARTUP_MSG:   java = 1.6.0_34
+************************************************************/
+15/03/27 19:10:03 INFO util.GSet: Computing capacity for map BlocksMap
+15/03/27 19:10:03 INFO util.GSet: VM type       = 32-bit
+15/03/27 19:10:03 INFO util.GSet: 2.0% max memory = 1013645312
+15/03/27 19:10:03 INFO util.GSet: capacity      = 2^22 = 4194304 entries
+15/03/27 19:10:03 INFO util.GSet: recommended=4194304, actual=4194304
+15/03/27 19:10:03 INFO namenode.FSNamesystem: fsOwner=hadoop
+15/03/27 19:10:03 INFO namenode.FSNamesystem: supergroup=supergroup
+15/03/27 19:10:03 INFO namenode.FSNamesystem: isPermissionEnabled=true
+15/03/27 19:10:03 INFO namenode.FSNamesystem: dfs.block.invalidate.limit=100
+15/03/27 19:10:03 INFO namenode.FSNamesystem: isAccessTokenEnabled=false accessKeyUpdateInterval=0 min(s), accessTokenLifetime=0 min(s)
+15/03/27 19:10:03 INFO namenode.FSEditLog: dfs.namenode.edits.toleration.length = 0
+15/03/27 19:10:03 INFO namenode.NameNode: Caching file names occuring more than 10 times
+15/03/27 19:10:04 INFO common.Storage: Image file /usr/local/haridfs/dfs/name/current/fsimage of size 112 bytes saved in 0 seconds.
+15/03/27 19:10:04 INFO namenode.FSEditLog: closing edit log: position=4, editlog=/usr/local/haridfs/dfs/name/current/edits
+15/03/27 19:10:04 INFO namenode.FSEditLog: close success: truncate to 4, editlog=/usr/local/haridfs/dfs/name/current/edits
+15/03/27 19:10:04 INFO common.Storage: Storage directory /usr/local/haridfs/dfs/name has been successfully formatted.
+15/03/27 19:10:04 INFO namenode.NameNode: SHUTDOWN_MSG:
+/************************************************************
+SHUTDOWN_MSG: Shutting down NameNode at hadoopserver/127.0.1.1
+************************************************************/
+hadoop@hadoopserver:~$
+hadoop@hadoopserver:~$ jps
+8834 Jps
+hadoop@hadoopserver:~$ start-all.sh
+starting namenode, logging to /usr/local/hadoop/libexec/../logs/hadoop-hadoop-namenode-hadoopserver.out
+hadoop@192.168.81.149's password:
+192.168.81.149: starting datanode, logging to /usr/local/hadoop/libexec/../logs/hadoop-hadoop-datanode-hadoopserver.out
+hadoop@192.168.81.149's password:
+192.168.81.149: starting secondarynamenode, logging to /usr/local/hadoop/libexec/../logs/hadoop-hadoop-secondarynamenode-hadoopserver.out
+starting jobtracker, logging to /usr/local/hadoop/libexec/../logs/hadoop-hadoop-jobtracker-hadoopserver.out
+hadoop@192.168.81.149's password:
+192.168.81.149: starting tasktracker, logging to /usr/local/hadoop/libexec/../logs/hadoop-hadoop-tasktracker-hadoopserver.out
+hadoop@hadoopserver:~$
+hadoop@hadoopserver:~$ jps
+9703 TaskTracker
+9135 DataNode
+9363 SecondaryNameNode
+9446 JobTracker
+9770 Jps
+8898 NameNode
+hadoop@hadoopserver:~$ history > hadoop_setup_installation_guide.hari
+hadoop@hadoopserver:~$ head hadoop_setup_installation_guide.hari
+    1  tar -xvzf hadoop-1.2.1.tar.gz
+    2  sudo cp -r hadoop-1.2.1 /usr/local/hadoop
+    3  vi .bashrc
+    4  sudo vi /usr/local/hadoop/conf/hadoop-env.sh
+    5  ls /usr/lib/jvm/
+    6  ls /usr/lib/jvm/java-6-openjdk-i386/
+    7  sudo vi /usr/local/hadoop/conf/hadoop-env.sh
+    8  javac
+    9  exec bash
+   10  start-all.sh
+hadoop@hadoopserver:~$ pwd
+/home/hadoop
+hadoop@hadoopserver:~$ cat resume.txt
+Name : Hariharan
+Last name : Ganapathy
+Qualification : MCA
+Experience : 5 years
+Specilization : Java, J2ee, Oracle, MySQL , Struts2, Hibernate, JPA, Spring & JSF2
+Technology : Hadoop 1 & it's eco system component such as Pig, Hive, HBASE, Zookeeper, Sqoop & Flume.
+
+hadoop@hadoopserver:~$ cat /home/hadoop/resume.txt
+Name : Hariharan
+Last name : Ganapathy
+Qualification : MCA
+Experience : 5 years
+Specilization : Java, J2ee, Oracle, MySQL , Struts2, Hibernate, JPA, Spring & JSF2
+Technology : Hadoop 1 & it's eco system component such as Pig, Hive, HBASE, Zookeeper, Sqoop & Flume.
+
+hadoop@hadoopserver:~$ head .bashrc
+# ~/.bashrc: executed by bash(1) for non-login shells.
+# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
+# for examples
+
+# If not running interactively, don't do anything
+[ -z "$PS1" ] && return
+
+# don't put duplicate lines or lines starting with space in the history.
+# See bash(1) for more options
+HISTCONTROL=ignoreboth
+hadoop@hadoopserver:~$ head -20  .bashrc
+# ~/.bashrc: executed by bash(1) for non-login shells.
+# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
+# for examples
+
+# If not running interactively, don't do anything
+[ -z "$PS1" ] && return
+
+# don't put duplicate lines or lines starting with space in the history.
+# See bash(1) for more options
+HISTCONTROL=ignoreboth
+
+# append to the history file, don't overwrite it
+shopt -s histappend
+
+# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+HISTSIZE=1000
+HISTFILESIZE=2000
+
+# check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.
+hadoop@hadoopserver:~$ tail .bashrc
+
+# enable programmable completion features (you don't need to enable
+# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
+# sources /etc/bash.bashrc).
+if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
+    . /etc/bash_completion
+fi
+
+export HADOOP_PREFIX=/usr/local/hadoop
+export PATH=$PATH:$HADOOP_PREFIX/bin
+hadoop@hadoopserver:~$ cat /usr/local/hadoop/conf/hadoop-env.sh
+# Set Hadoop-specific environment variables here.
+
+# The only required environment variable is JAVA_HOME.  All others are
+# optional.  When running a distributed configuration it is best to
+# set JAVA_HOME in this file, so that it is correctly defined on
+# remote nodes.
+
+# The java implementation to use.  Required.
+ export JAVA_HOME=/usr/lib/jvm/java-6-openjdk-i386
+
+# Extra Java CLASSPATH elements.  Optional.
+# export HADOOP_CLASSPATH=
+
+# The maximum amount of heap to use, in MB. Default is 1000.
+# export HADOOP_HEAPSIZE=2000
+
+# Extra Java runtime options.  Empty by default.
+# export HADOOP_OPTS=-server
+
+# Command specific options appended to HADOOP_OPTS when specified
+export HADOOP_NAMENODE_OPTS="-Dcom.sun.management.jmxremote $HADOOP_NAMENODE_OPTS"
+export HADOOP_SECONDARYNAMENODE_OPTS="-Dcom.sun.management.jmxremote $HADOOP_SECONDARYNAMENODE_OPTS"
+export HADOOP_DATANODE_OPTS="-Dcom.sun.management.jmxremote $HADOOP_DATANODE_OPTS"
+export HADOOP_BALANCER_OPTS="-Dcom.sun.management.jmxremote $HADOOP_BALANCER_OPTS"
+export HADOOP_JOBTRACKER_OPTS="-Dcom.sun.management.jmxremote $HADOOP_JOBTRACKER_OPTS"
+# export HADOOP_TASKTRACKER_OPTS=
+# The following applies to multiple commands (fs, dfs, fsck, distcp etc)
+# export HADOOP_CLIENT_OPTS
+
+# Extra ssh options.  Empty by default.
+# export HADOOP_SSH_OPTS="-o ConnectTimeout=1 -o SendEnv=HADOOP_CONF_DIR"
+
+# Where log files are stored.  $HADOOP_HOME/logs by default.
+# export HADOOP_LOG_DIR=${HADOOP_HOME}/logs
+
+# File naming remote slave hosts.  $HADOOP_HOME/conf/slaves by default.
+# export HADOOP_SLAVES=${HADOOP_HOME}/conf/slaves
+
+# host:path where hadoop code should be rsync'd from.  Unset by default.
+# export HADOOP_MASTER=master:/home/$USER/src/hadoop
+
+# Seconds to sleep between slave commands.  Unset by default.  This
+# can be useful in large clusters, where, e.g., slave rsyncs can
+# otherwise arrive faster than the master can service them.
+# export HADOOP_SLAVE_SLEEP=0.1
+
+# The directory where pid files are stored. /tmp by default.
+# NOTE: this should be set to a directory that can only be written to by
+#       the users that are going to run the hadoop daemons.  Otherwise there is
+#       the potential for a symlink attack.
+# export HADOOP_PID_DIR=/var/hadoop/pids
+
+# A string representing this instance of hadoop. $USER by default.
+# export HADOOP_IDENT_STRING=$USER
+
+# The scheduling priority for daemon processes.  See 'man nice'.
+# export HADOOP_NICENESS=10
+hadoop@hadoopserver:~$
+hadoop@hadoopserver:~$
+hadoop@hadoopserver:~$
+hadoop@hadoopserver:~$ history > hadoop_setup_installation_cmds_guide.hari
+hadoop@hadoopserver:~$
+hadoop@hadoopserver:~$
+hadoop@hadoopserver:~$
+hadoop@hadoopserver:~$ cat hadoop_setup_installation_cmds_guide.hari
+    1  tar -xvzf hadoop-1.2.1.tar.gz
+    2  sudo cp -r hadoop-1.2.1 /usr/local/hadoop
+    3  vi .bashrc
+    4  sudo vi /usr/local/hadoop/conf/hadoop-env.sh
+    5  ls /usr/lib/jvm/
+    6  ls /usr/lib/jvm/java-6-openjdk-i386/
+    7  sudo vi /usr/local/hadoop/conf/hadoop-env.sh
+    8  javac
+    9  exec bash
+   10  start-all.sh
+   11  sudo chown hadoop /usr/local/hadoop/
+   12  sudo chown hadoop /usr/local/hadoop/lib
+   13  sudo chown hadoop /usr/local/hadoop/bin/
+   14  sudo chown hadoop /usr/local/hadoop/conf/
+   15  start-all.sh
+   16  jps
+   17  vi resume.txt
+   18  hadoop jar /usr/local/hadoop/hadoop-examples-1.2.1.jar wordcount /home/hadoop/resume.txt /home/hadoop/output
+   19  ls output/
+   20  cat output/part-r-00000
+   21  vi /usr/local/hadoop/conf/core-site.xml
+   22  vi /usr/local/hadoop/conf/mapred-site.xml
+   23  vi /usr/local/hadoop/conf/masters
+   24* cat
+   25  cat /usr/local/hadoop/conf/core-site.xml
+   26  cat /usr/local/hadoop/conf/mapred-site.xml
+   27  cat /usr/local/hadoop/conf/masters
+   28  cat /usr/local/hadoop/conf/slaves
+   29  sudo mkdir /usr/local/haridfs
+   30  sudo chown hadoop /usr/local/haridfs/
+   31  stop-all.sh
+   32  jps
+   33  hadoop namenode -format
+   34  jps
+   35  start-all.sh
+   36  jps
+   37  history > hadoop_setup_installation_guide.hari
+   38  head hadoop_setup_installation_guide.hari
+   39  pwd
+   40  cat resume.txt
+   41  cat /home/hadoop/resume.txt
+   42  head .bashrc
+   43  head -20  .bashrc
+   44  tail .bashrc
+   45  cat /usr/local/hadoop/conf/hadoop-env.sh
+   46  history > hadoop_setup_installation_cmds_guide.hari
+hadoop@hadoopserver:~$
+hadoop@hadoopserver:~$
+hadoop@hadoopserver:~$

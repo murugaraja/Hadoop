@@ -1,0 +1,255 @@
+Hadoop v2  - Steps to Configure a Single-Node YARN Cluster
+==========================================================
+Getting Started
+---------------
+A basic Apache Hadoop version 2 system has two components:
+1.The HDFS for storing data
+2.Hadoop YARN for implementing applications to process data
+
+A Steps to configure a Single node YARN Cluster:
+------------------------------------------------
+Step 0 : Basic system requirement:
+----------------------------------
+RAM - 2GB 
+Java - 6 or later
+*nux server OS
+
+[Present OS
+	 user name :hadoop
+	 password  :123456
+
+Used softwares : VM Workstation_v10,
+		     Ubuntu12.0_LTS os image file,
+		     WinSCP & putty. ]	
+	
+Step 1:Doptload Apache Hadoop
+-----------------------------
+To download the latest distribution from http://hadoop.apache.org
+
+$ cd /root
+$ wget http://mirrors.ibiblio.org/apache/hadoop/common/
+          hadoop-2.6.0/hadoop-2.6.0.tar.gz
+
+Next create and extract the package in /opt/yarn
+$ mkdir -p /opt/yarn
+$ cd /opt/yarn
+$ pwd
+$ tar xvzf /root/hadoop-2.6.0.tar.gz
+
+Step 2: Set JAVA_HOME
+---------------------
+For Hadoop 2, the recommended version of Java can be found at 
+http://wiki.apache.org/hadoop/HadoopJavaVersions
+
+In general, JDK 1.6 (or greater) should work.
+
+$ export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-i386
+
+
+Step 3: Create Users and Groups
+-------------------------------
+$ sudo groupadd hadoopusers
+$ sudo useradd -m -g hadoopusers -s /bin/bash hdfsuser
+
+//to delete user account   $ sudo userdel hdfsuser 
+
+$ sudo useradd -m -g hadoopusers -s /bin/bash yarnuser
+$ sudo useradd -m -g hadoopusers -s /bin/bash mapreduser
+
+// to set password for each user
+$ sudo passwd hdfsuser
+// password is set to hdfs
+$ sudo passwd yarnuser
+// password is set to yarn
+$ sudo password mapreduser
+// password is set to mapred
+
+//How to switch user     
+	$ su - hadoop    [or]    $ su - hdfsuser 
+
+Step 4: Make Data and Log Directories:
+--------------------------------------
+$ sudo mkdir -p /var/data/hadoop/hdfs/nn
+$ sudo mkdir -p /var/data/hadoop/hdfs/snn
+$ sudo mkdir -p /var/data/hadoop/hdfs/dn
+
+$ sudo chown hdfsuser:hadoopusers /var/data/hadoop/hdfs -R
+$ sudo mkdir -p /var/log/hadoop/yarn
+$ sudo chown yarnuser:hadoopusers /var/log/hadoop/yarn -R
+
+
+Next, move to YARN installation root and create the log directory and
+set the opter and grou as follows:
+
+$ cd /opt/yarn/hadoop-2.6.0
+$ sudo mkdir logs
+$ sudo chmod g+w logs
+$ sudo chown yarnuser:hadoopusers  . -R
+
+
+Step 5: Configure core-site.xml
+-------------------------------
+//edit the  etc/hadoop/core-site.xml 
+/*
+Two props need to be set 
+1.NN (metadata server for HDFS)
+2.will set the default user name to hdfs
+*/
+
+<configuration>
+  <property>
+	<name>fs.default.name</name>
+	<value>hdfs://192.168.81.149:9000</value>
+  </property>
+
+  <property>
+	<name>hadoop.http.staticuser.user</name>
+	<value>hdfs</value>
+  </property>
+</configuration>
+
+
+Step 6: Configure hdfs-site.xml
+-------------------------------
+/* From the bae of the Hadoop installation path,
+edit the etc/hadoop/hdfs-site.xml file */
+
+<configuration>
+  
+  <property>
+	<name>dfs.replication</name>
+	<value>1</value>
+  </property>
+
+  <property>
+	<name>dfs.namenode.name.dir</name>
+	<value>file:/var/data/hadoop/hdfs/nn</value>
+  </property>
+
+  <property>
+	<name>fs.checkpoint.dir</name>
+	<value>file:/var/data/hadoop/hdfs/snn</value>
+  </property>
+
+  <property>
+	<name>fs.checkpoint.edits.dir</name>
+	<value>file:/var/data/hadoop/hdfs/snn</value>
+  </property>
+
+  <property>
+	<name>dfs.datanode.data.dir</name>
+	<value>file:/var/data/hadoop/hdfs/dn</value>
+  </property>
+</configuration>
+
+
+Step 7: Configure mapred-site.xml
+---------------------------------
+/* Edit the  etc/hadoop/mapred-site.xml */
+
+$ cp  mapred-ste.xml.template  mapred-site.xml
+
+<configuration>
+
+  <property>
+	<name>mapreduce.framework.name</name>
+	<value>yarn</value>
+  </property>
+  
+</configuration>
+
+
+Step 8: Configure yarn-site.xml
+-------------------------------
+The yarn.nodemanager.aux-services property tells NodeManagers that there will
+be an auxiliary service called "mapreduce.shuffle" that they need to implement. After
+we tell the NodeManagers to implement that service, we give it a class name as the
+means to implement that service. This particular configuration tells MapReduce how
+to do its shuffle.
+/* Edit the  etc/hadoop/yarn-site.xml */
+
+<configuration>
+
+  <property>
+	<name>yarn.nodemanager.aux-services</name>
+	<value>mapreduce_shuffle</value>
+  </property>
+
+  <property>
+	<name>yarn.nodemanager.aux-services.mapreduce.shuffle.class</name>
+	<value>org.apache.hadoop.mapred.ShuffleHandler</value>
+  </property>  
+</configuration>
+
+
+Step 9: Modify Java Heap Sizes
+------------------------------
+
+Edit the etc/hadoop/hadoop-env.sh file to ref lect the following (don’t forget to
+remove the “#” at the beginning of the line):
+
+HADOOP_HEAPSIZE="500"
+HADOOP_NAMENODE_INIT_HEAPSIZE="500"
+
+Next, edit mapred-env.sh to reflect the following:
+
+HADOOP_JOB_HISTORYSERVER_HEAPSIZE=250
+
+Finally, edit yarn-env.sh to reflect the following:
+
+JAVA_HEAP_MAX=-Xmx500m
+
+The following line will need to be added to yarn-env.sh:
+YARN_HEAPSIZE=500
+
+
+Step 10: Format HDFS
+--------------------
+For the HDFS NameNode to start, it needs to initialize the directory where it
+will hold its data. The NameNode service tracks all the metadata for the file system.
+The format process will use the value assigned to dfs.namenode.name.dir in
+etc/hadoop/hdfs-site.xml earlier (i.e., /var/data/hadoop/hdfs/nn).
+
+$ su - hdfsuser
+$ cd /opt/yarn/haoop-2.6.0/bin
+$ ./hdfs namenode -format
+
+
+Step 11: Start the HDFS Services
+--------------------------------
+$  cd ../sbin
+$  ./hadoop-daemon.sh start namenode
+$  jps
+$  ./hadoop-daemon.sh start secondarynamenode
+$  jps
+$  ./hadoop-daemon.sh start datanode
+
+$  jps
+
+// to stop service
+$ ./hadoop-daemon.sh stop secondarynamenode
+
+
+Step 12: Start YARN Services
+----------------------------
+$ exit
+logout
+$ su - yarnuser
+$ cd  /opt/yarn/hadoop-2.6.0/sbin
+$ ./yarn-daemon.sh start resourcemanager
+$ ./yarn-daemon.sh start nodemanager
+$ jps
+
+// to stop yarn service
+$ ./yarn-daemon.sh stop resourcemanager
+$ ./yarn-daemon.sh stop nodemanager
+$ jps
+
+
+Step 13: Verify the Running Services Using the Web Interface
+------------------------------------------------------------
+to monitor HDFS
+$ firfox http://192.168.81.149:50070
+
+A web interface for ResourceManager can be viewed by 
+$ firefox http://192.168.81.149:8088

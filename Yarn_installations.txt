@@ -1,0 +1,101 @@
+Installation and Running
+Step 1 : Download a tarball and define $YARN_HOME
+
+•Download and unpack a Hadoop-0.23.x (or later) tarball from here
+•Unpack the tarball and define $YARN_HOME
+> export YARN_HOME=/Users/sianand/Apps/hadoop-0.23.8
+
+Step 2 : Alter core-site.xml
+
+> cd $YARN_HOME
+
+> vi ./etc/hadoop/core-site.xml
+
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+  <property>
+    <name>fs.default.name</name>
+    <value>hdfs://localhost:9000</value>
+  </property>
+</configuration>Step 3 : Create local directories for the namenode and datanode
+
+> mkdir -p /Users/sianand/yarn_data/hdfs/namenode
+> mkdir /Users/sianand/yarn_data/hdfs/datanode
+Step 4 : Format the namenode
+
+> cd $YARN_HOME
+> bin/hdfs namenode -format
+Step 5 : Alter hdfs-site.xml
+> cd $YARN_HOME
+
+> vi ./etc/hadoop/hdfs-site.xml
+
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<configuration>
+  <property>
+    <name>dfs.replication</name>
+    <value>1</value>
+  </property>
+  <property>
+    <name>dfs.namenode.name.dir</name>
+    <value>file:/Users/sianand/yarn_data/hdfs/namenode</value>
+  </property>
+  <property>
+    <name>dfs.datanode.data.dir</name>
+    <value>file:/Users/sianand/yarn_data/hdfs/datanode</value>
+  </property>
+</configuration>Step 6 : Start the HDFS services
+> cd $YARN_HOME
+>./bin/hdfs namenode &
+>./bin/hdfs secondarynamenode & 
+>./bin/hdfs datanode &
+ 
+Step 7 : Alter yarn-env.sh
+> cd $YARN_HOME
+> vi ./etc/hadoop/yarn-env.sh
+Add the following under the definition of YARN_CONF_DIR:
+export HADOOP_CONF_DIR="${HADOOP_CONF_DIR:-$YARN_HOME/etc/hadoop}"
+export HADOOP_COMMON_HOME="${HADOOP_COMMON_HOME:-$YARN_HOME}"
+export HADOOP_HDFS_HOME="${HADOOP_HDFS_HOME:-$YARN_HOME}"Step 8 : Alter yarn-site.xml
+> cd $YARN_HOME
+> vi ./etc/hadoop/yarn-site.xml
+<?xml version="1.0"?>
+<configuration>
+  <property>
+    <name>yarn.nodemanager.aux-services</name>
+    <value>mapreduce.shuffle</value>
+  </property>
+  <property>
+    <name>yarn.nodemanager.aux-services.mapreduce.shuffle.class</name>
+    <value>org.apache.hadoop.mapred.ShuffleHandler</value>
+  </property>
+</configuration>Step 8 : Alter mapred-site.xml
+> cd $YARN_HOME
+> vi ./etc/hadoop/mapred-site.xml<?xml version=“1.0”?>
+<?xml version="1.0"?>
+<?xml-stylesheet href="configuration.xsl"?>
+<configuration>
+  <property>
+    <name>mapreduce.framework.name</name>
+    <value>yarn</value>
+  </property>
+</configuration>Step 9 : Start the YARN services
+> cd $YARN_HOME
+>./bin/yarn resourcemanager
+>./bin/yarn nodemanager
+If all went well, typing ‘jps’ at the command prompt will show you all services running:
+sianand-mn:hadoop-0.23.1 sianand$ jps
+95579 ResourceManager
+94607 NameNode
+6815 Jps
+94801 DataNode
+95723 NodeManager
+94950 SecondaryNameNode
+Now you are ready to try it out by running an example.
+Step 10 : Run an example to ensure it is working
+This example computes pi.
+> cd $YARN_HOME
+> bin/hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-0.23.1.jar pi -Dmapreduce.clientfactory.class.name=org.apache.hadoop.mapred.YarnClientFactory -libjars share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-0.23.1.jar 16 10000

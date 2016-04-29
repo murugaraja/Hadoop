@@ -1,0 +1,263 @@
+
+SQOOP
+=====
+Import & Export data between HDFS & RDBMS servers (Jdbc complaint).
+
+SQOOP Setup:
+============
+1) vi .bashrc 
+	export HADOOP_HOME,HADOOP_COMMON_HOME,HADOOP_MAPRED_HOME
+	export SQOOP_HOME
+	export PATH
+2) cp mysql-java-connector.jar to SQOOP_HOME/lib folder
+3) to test
+  java -version
+  hadoop version
+  sqoop -version (or) sqoop-version
+
+Practices:
+==========
+List schemas - databases,tables
+------------
+$ sqoop list-databases 	--connect jdbc:mysql://localhost/  --username root -P
+(or)
+$ sqoop-list-databases 	--connect jdbc:mysql://localhost/  --username root -P
+
+$ sqoop list-tables --connect jdbc:mysql://localhost/mysql --username root -P
+(or)
+$ sqoop-list-tables --connect jdbc:mysql://localhost/mysql --username root -P
+
+Import :
+========
+import all tables: ( Note: Each table must have primary key)
+------------------
+$ sqoop import-all-tables --connect jdbc:mysql://localhost/naveendb --username root -P
+$ hadoop fs -ls /user/hadoop
+  
+(Note:emp,dept are stored as text or binary file (csv file))
+
+
+import a table with primary key
+----------------------------------
+$ sqoop import  --connect jdbc:mysql://localhost/demodb --username root --table demotable  -P
+(or)
+
+import a table has no primary key
+-------------------------------
+$ sqoop import  --connect jdbc:mysql://localhost/demodb --username root --table demo1 -m 1 -P
+
+
+EXPORT :
+========
+$ sqoop export --connect jdbc:mysql://localhost/exportdb --username root -P --table demo1 --export-dir /user/hadoop/demo1/part-m-00000
+$ mysql -u root -p 
+mysql> use exportdb;
+mysql> select * from demo1;
+
+
+
+note : job , codegen ,eval  also available.
+
+
+
+
+
+
+Real time data aquisition for analysis (later):
+===============================================
+Flume
+=====
+ Flume has agents
+ Source	: Twitter tweets 
+ Sink 	: HDFS
+ Channel: Can be anything like async interface between source & sink
+
+Set up Flume :
+==============
+1. Download apache-flume tar ball
+	apache-flume-1.4.0-bin.tar.gz
+2. Extract tar ball
+	$ tar -xvzf apache-flume-1.4.0-bin.tar.gz
+3. Move to framework location
+	$ sudo cp -r apache-flume-1.4.0-bin  /usr/local/flume
+4. Copy neccessary jar to flume/bin folder.
+	$ sudo flume-sources-1.0-SNAPSHOT.jar /usr/local/flume/bin/
+5. Do neccessary configuration
+	$ sudo cp /usr/local/flume/conf/flume-env.sh.template /usr/local/flume/conf/flume-env.sh
+	$ sudo chown hadoop /usr/local/flume/ -R
+   	$ vi /usr/local/flume/conf/flume-env.sh
+
+	[ To add the below 2 lines.
+
+	JAVA_HOME=/usr/lib/jvm/java-7-openjdk-i386
+	FLUME_CLASSPATH=/usr/local/flume/bin/flume-sources-1.0-SNAPSHOT.jar
+	]
+
+
+6.Update the System
+	$ exec bash
+7.Create and Copy "flume.conf" to  flume/conf folder
+	$ vi flume.conf
+	$ cat flume.conf
+TwitterAgent.sources = Twitter
+TwitterAgent.channels = MemChannel
+TwitterAgent.sinks = HDFS
+
+TwitterAgent.sources.Twitter.type = com.cloudera.flume.source.TwitterSource
+TwitterAgent.sources.Twitter.channels = MemChannel
+TwitterAgent.sources.Twitter.consumerKey = ZsgAsS49YAlkL4qHLPifgHP1i
+TwitterAgent.sources.Twitter.consumerSecret = aKTUDHD2iGZaUs30E9YZ696Q67jbAbqMjoA3qBGp4hbQ8HZmhz
+TwitterAgent.sources.Twitter.accessToken = 856081592-yyxE784eP75AkoYbCqEbELi8DNPGjXnTRURaXEq7
+TwitterAgent.sources.Twitter.accessTokenSecret = 3S3pONg6EBUX4FdfC28TLc19o0US2qsTddMHVBaETkLI4
+
+TwitterAgent.sources.Twitter.keywords = hadoop, big data, analytics, bigdata, cloudera, data science, data scientiest, business intelligence, mapreduce, data warehouse, data warehousing, mahout, hbase, nosql, newsql, businessintelligence, cloudcomputing
+
+TwitterAgent.sinks.HDFS.channel = MemChannel
+TwitterAgent.sinks.HDFS.type = hdfs
+TwitterAgent.sinks.HDFS.hdfs.path = hdfs://192.168.81.155:10000/user/flume/mytweets/
+TwitterAgent.sinks.HDFS.hdfs.fileType = DataStream
+TwitterAgent.sinks.HDFS.hdfs.writeFormat = Text
+TwitterAgent.sinks.HDFS.hdfs.batchSize = 1000
+TwitterAgent.sinks.HDFS.hdfs.rollSize = 0
+TwitterAgent.sinks.HDFS.hdfs.rollCount = 10000
+
+TwitterAgent.channels.MemChannel.type = memory
+TwitterAgent.channels.MemChannel.capacity = 10000
+TwitterAgent.channels.MemChannel.transactionCapacity = 100
+
+
+	$ cp flume.conf /usr/local/flume/conf/
+8.Navigate to flume home folder
+
+	$ cd /usr/local/flume/
+	
+9.Trigger agents
+	$ bin/flume-ng agent --conf ./conf -f ./conf/flume.conf -Dflume.root.logger=DEBUG,console -n TwitterAgent
+	
+10. In browser try the below URL 
+  http://192.168.81.155:50070/user/flume/mytweets
+
+Points to remember:-
+1. TwitterAgent.sinks.HDFS.hdfs.path = hdfs://192.168.81.155:10000/user/flume/mytweets/
+2. To collect "customerKeys and accessTokens" from https://dev.twitter.com/apps 		
+3. "TwitterAgent.sources.Twitter.keywords" depends on Data Analyst or User.
+
+Output in JSON format:
+11. download hive-serdes-1.0-SNAPSHOT.jar file .
+12. paste (step-11) jar  into $HIVE_HOME/lib folder
+13. In hive cli
+   $ hive
+   $ hive --service metastore & 
+   $ netstat -al | grep 9083    (or)  netstat -an | grep '9083'
+
+hive>CREATE EXTERNAL TABLE tweets (
+   id BIGINT,
+   created_at STRING,
+   source STRING,
+   favorited BOOLEAN,
+   retweet_count INT,
+   retweeted_status STRUCT<
+      text:STRING,
+      user:STRUCT<screen_name:STRING,name:STRING>>,
+   entities STRUCT<
+      urls:ARRAY<STRUCT<expanded_url:STRING>>,
+      user_mentions:ARRAY<STRUCT<screen_name:STRING,name:STRING>>,
+      hashtags:ARRAY<STRUCT<text:STRING>>>,
+   text STRING,
+   user STRUCT<
+      screen_name:STRING,
+      name:STRING,
+      friends_count:INT,
+      followers_count:INT,
+      statuses_count:INT,
+      verified:BOOLEAN,
+      utc_offset:INT,
+      time_zone:STRING>,
+   in_reply_to_screen_name STRING
+) 
+ROW FORMAT SERDE 'com.cloudera.hive.serde.JSONSerDe'
+LOCATION '/user/flume/mytweets';
+
+hive> describe tweets ;
+
+hive> select * from tweets ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-----------------  Thank you ---------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Questions?
+-----------
+1.Find out whose tweets are re-tweeted the most?
+
+2.Who (user) has the most number of followers ?
+
+Questions depend on data|business analyst ...
+
+
+
+
+
+
+
+
+Solutions:
+-----------
+1.SELECT t.retweeted_screen_name, sum(retweets) AS total_retweets, count(*) AS tweet_count FROM (SELECT retweeted_status.user.screen_name as retweeted_screen_name, retweeted_status.text, max(retweet_count) as retweets FROM tweets GROUP BY retweeted_status.user.screen_name, retweeted_status.text) t GROUP BY t.retweeted_screen_name ORDER BY total_retweets DESC LIMIT 10;
+2.select user.screen_name, user.followers_count c from tweets order by c desc; 
+
+ 

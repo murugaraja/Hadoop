@@ -1,0 +1,382 @@
+
+Pig:
+-----
+Pig is a hadoop eco system component
+Pig is a data flow language
+Pig for OLAP
+Pig has 2 execution modes using grunt shell.
+ 1) local mode      - HDFS is not available , Current OS Filesystem is used
+ 2) mapreduce mode  - HDFS is available for storage for mapreduce processing
+
+(Note: Function names are case sensitive in Pig).
+
+
+
+Setup Pig
+---------
+To download pig-0.11.1.tar.gz from pig.apache.org
+$ pwd
+$ tar -xvzf pig-0.11.1.tar.gz
+$ sudo cp -r pig-0.11.1/  /usr/local/pig
+$ sudo ls /usr/local/pig
+
+$ sudo vi ~/.bashrc
+
+  export PIG_PREFIX=/usr/local/pig
+  export PATH=$PATH:$PIG_PREFIX/bin
+  export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-i386
+ 
+
+Practicals:
+-----------
+1. Pig in local mode:
+
+   $ pig -x local
+
+   grunt>   exit;
+
+
+2. Pig in mapreduce mode:
+
+   $ pig -x mapreduce 
+   grunt>  exit;
+
+Pig Latin Basics:
+-----------------
+Data Types and More:
+--------------------
+Identifiers: Identifiers include the name of relations (aliases), fields, variables and so on.
+Relations,Bags,Tuples,Fields: 
+  1. a relation is a bag 
+  2. a bag is a collection of tuples
+  3. a tuple is an ordered set of fields
+  4. a field is a piece of data
+
+Referencing Relations:
+----------------------
+$ cd ~  
+  (or)
+$ vi /home/hadoop/emp.tsv
+
+[example: "emp.tsv"
+1	aaaaaa	100000
+2	bbbbbb 	200000
+3	cccccc	300000
+4	aaaaaa	400000
+5	dddddd	500000
+
+:wq! ]
+
+$ pig -x local
+grunt> A = LOAD '/home/hadoop/emp.tsv' ;
+grunt> DUMP A;
+grunt> DESCRIBE A ;     --  no schema !
+grunt> B = LOAD '/home/hadoop/emp.tsv' USING PigStorage('\t') AS (id,name,salary)  ;
+grunt> DESCRIBE B ;     --  yes !
+grunt> C = LOAD '/home/hadoop/emp.tsv' USING PigStorage('\t') AS (id:int , name:chararray, salary:double );
+grunt> DESCRIBE C ;
+grunt> C = LOAD '/home/hadoop/emp.tsv' USING PigStorage('\t') AS (id:int , name , salary:double );
+grunt> DESCRIBE C ;
+
+Positional notation using $ :
+grunt> CC = FOREACH C GENERATE $0 ;
+grunt> describe CC;
+grunt> CC = FOREACH C GENERATE $0,$2 ;
+grunt> describe CC;
+
+grunt> a1 = load 'emp.tsv' ;
+grunt> b1 = filter a1 by $2>0 ; 
+grunt> dump b2;
+grunt> b2 = filter a1 by (int)$2<0 ;
+grunt> dump b2;
+grunt> a1 = load 'emp.tsv' USING PigStorage() AS (c1,c2,c3) ;
+grunt> b3 = filter a1 by c3<0 ; 
+grunt> b4 = filter a1 by (int)c3<0 ; 
+grunt> dump b3 ;   -- dump b4;
+grunt> c1 = LIMIT a1 2 ;
+grunt> dump c1 ;
+
+
+grunt> a1 = 
+
+Data Type: Simple and Complex:
+------------------------------
+Simple:- int,long,float,double,chararray,bytearray,boolean,datetime,biginteger,bigdecimal.
+Complex:- tuple,bag,map.
+(e.g: 	tuple 	- tuple(id:int,name:chararray) 	- (1, 'aaaaa')
+ 	bag 	- bag{(),()} 			- {(1,'aaaa'),(2,'bbb')}
+	map 	- [key#value]			- ['pig'#'apache']
+
+grunt> empdata = LOAD '/home/hadoop/emp.tsv' USING PigStorage('\t') AS (id:int , name:chararray, salary:double );
+
+
+grunt> aaa = load 'emp.tsv' ;
+grunt> bbb = foreach aaa generate flatten(TOKENIZE( (chararray) $0)) as word ;
+grunt> describe bbb ;
+bbb: {word: chararray}
+grunt> ccc = group bbb by word ;
+grunt> describe ccc ;
+ccc: {group: chararray,bbb: {(word: chararray)}}
+grunt> ddd = foreach ccc generate COUNT(bbb) , group ;
+grunt> describe ddd ;
+ddd: {long,group: chararray}
+grunt> -- dump ddd ;
+grunt> -- store ddd inti '~/wordcount' ;
+
+ [ 
+ 	exit;  	 and
+	1.check the output dir "ls ~/wordcount"
+ 	  _SUCESS
+	  part-m-00000
+	2. $ cat ~/wordcount/part-m-00000
+ ]
+
+grunt> -- explain ddd ;
+
+
+grunt> aaa = load 'emp.tsv' ;
+grunt> bbb = foreach aaa generate flatten(TOKENIZE( (chararray) $1 )) as word ;
+grunt> ccc = group bbb by word ;
+grunt> ddd = foreach ccc generate COUNT(bbb) , group ;
+grunt> dump ddd ;
+grunt> explain ddd ;
+
+
+Using pig scripts:
+
+$ bin/pig -x local wordcount.pig
+
+mapreduce mode:
+$ hadoop dfs -copyFromLocal input.txt input/input.txt
+$ pig -x mapreduce wordcount.pig
+
+
+
+
+
+
+
+Advanced Level : Writing Java UDF :-
+====================================
+hadoop@ubuntuserver:~$ cd ~
+hadoop@ubuntuserver:~$ pwd
+/home/hadoop
+
+STEP 1 :- CREATE A JAVA PROGRAM 
+-------------------------------
+
+hadoop@ubuntuserver:~$ vi  Upper.java
+
+hadoop@ubuntuserver:~$ cat Upper.java
+package com.hari.udfs;
+import java.io.IOException;
+import org.apache.pig.EvalFunc;
+import org.apache.pig.data.Tuple;
+
+public class Upper extends EvalFunc<String>
+{
+ public String exec(Tuple input) throws IOException{
+        if(input == null || input.size()==0 || input.get(0)==null)
+        {
+        return null;
+        }
+        try{
+                String str = (String) input.get(0);
+                return str.toUpperCase();
+        }catch(Exception ex){
+                System.out.print("Weldone "+ex);
+        }
+        return "hari";
+ }
+
+}
+
+hadoop@ubuntuserver:~$ export CLASSPATH=$CLASSPATH:/usr/local/pig/pig-0.11.1.jarhadoop@ubuntuserver:~$ ls | grep 'Up'
+
+Upper.class
+Upper.java
+
+hadoop@ubuntuserver:~$ javac -d  .  Upper.java
+
+hadoop@ubuntuserver:~$ ls com/hari/udfs/
+
+Upper.class
+
+hadoop@ubuntuserver:~$ pwd
+
+/home/hadoop
+
+hadoop@ubuntuserver:~$
+
+STEP 2 :- CREATE A corresponding JAR 
+-------------------------------------
+
+hadoop@ubuntuserver:~$ jar -cvMf hari-udf.jar com/hari/udfs/Upper.class
+
+adding: com/hari/udfs/Upper.class(in = 1258) (out= 692)(deflated 44%)
+
+hadoop@ubuntuserver:~$
+hadoop@ubuntuserver:~$ ls -l  hari-udf.jar
+-rw-rw-r-- 1 hadoop hadoop 864 Apr 23 16:49 hari-udf.jar
+hadoop@ubuntuserver:~$
+hadoop@ubuntuserver:~$
+
+STEP 3 :- CREATE A PigLatin script - to invoke own function 
+-----------------------------------
+
+hadoop@ubuntuserver:~$ vi pigscript.pig
+hadoop@ubuntuserver:~$ cat pigscript.pig
+
+REGISTER hari-udf.jar ;
+aa = LOAD 'emp.tsv' AS (id:int, name:chararray, salary:double);
+bb = FOREACH aa GENERATE com.hari.udfs.Upper(name) ;
+DUMP bb ;
+
+STEP 4 :- Execution Success !!!
+-------------------------------
+
+hadoop@ubuntuserver:~$ java -cp /usr/local/pig/pig-0.11.1.jar org.apache.pig.Main -x local pigscript.pig
+2015-04-23 16:55:00,532 [main] INFO  org.apache.pig.Main - Apache Pig version 0.11.1 (r1459641) compiled Mar 22 2013, 02:13:53
+2015-04-23 16:55:00,532 [main] INFO  org.apache.pig.Main - Logging error messages to: /home/hadoop/pig_1429788300530.log
+....................
+2015-04-23 16:55:04,908 [main] INFO  org.apache.pig.tools.pigstats.SimplePigStats - Script Statistics:
+....................
+Success!
+....................
+Input(s):
+Successfully read records from: "file:///home/hadoop/emp.tsv"
+....................
+Output(s):
+Successfully stored records in: "file:/tmp/temp518506044/tmp122257662"
+....................
+2015-04-23 16:55:04,920 [main] INFO  org.apache.pig.backend.hadoop.executionengine.util.MapRedUtil - Total input paths to process : 1
+
+(AAAAAAAAA)
+(BBBBBBBBB)
+(CCCCCCCCC)
+(AAAAAAAAA)
+(DDDDDDDDD)
+
+hadoop@ubuntuserver:~$
+
+
+
+
+Hadoop eco-system component: Hive
+=================================
+Introduction to Hive
+---------------------
+Apache Hive is a client library providing a table like abstraction on top of the data in HDFS for data processing.
+Hive jobs are converted to MR plans  which is then submitted to the Hadoop cluster for execution.
+
+Hive metastore: 
+---------------
+Hive table definitions and mapping to the data stored in "metastore".
+Metastore constitutes of 
+ a)the metastore service and
+ b)the database.
+
+Simply metastore is (service+database)
+
+Diff ways to configure Metastore:
+---------------------------------
+Embedded metastore
+Local metastore
+Remote metastore
+
+Embedded metastore: 
+-------------------
+	* No configuration needed (Default hive)
+	* Hive driver,metastore interface and db(derby) all use the same JVM.	
+	* Developer and Tester can go for it.
+
+
+Local metastore:
+----------------
+	* External database which is JDBC complaint - e.g:MySQL DB
+	* Each 'Hive driver' and 'metastore interface' uses the same JVM.
+	* Useful in Production. 
+Setup:
+------
+ Step 1: To install mysql server
+	$ sudo apt-get install mysql-server
+   Note:
+	To add mysql-java-connector.jar in $HIVE_HOME/lib folder
+		(or)
+	$ sudo apt-get install libmysql-java
+	$ ln -s /usr/share/java/mysql-connector-java.jar
+ Step 2: create a new file hive-site.xml in conf folder
+	$ sudo vi $HIVE_HOME/conf/hive-site.xml
+
+    <?xml version="1.0" ?>
+    <configuration>
+    <property>
+        <name>javax.jdo.option.ConnectionURL</name>
+        <value>jdbc:mysql://localhost/hcatalog?createDatabaseIfNotExist=true</value>
+    </property>
+    <property>
+          <name>javax.jdo.option.ConnectionUserName</name>
+          <value>vm4learning</value>
+    </property>
+    <property>
+        <name>javax.jdo.option.ConnectionPassword</name>
+          <value>vm4learning</value>
+    </property>
+    <property>
+        <name>javax.jdo.option.ConnectionDriverName</name>
+        <value>com.mysql.jdbc.Driver</value>
+    </property>
+    </configuration>
+	
+Remote metastore:
+----------------
+Setup :
+-------
+Step 1 : To add in $HIVE_HOME/conf folder
+hive-site.xml
+-------------
+    <property>
+        <name>hive.metastore.uris</name>
+        <value>thrift://localhost:9083</value>
+    </property>
+
+Step 2: Start the remote metastore
+
+ $  bin/hive --service metastore &
+
+Step 3 : To test
+
+ $ netstat -an  |  grep 9083
+
+
+
+Hive DML:
+---------
+1.LOAD 
+	
+2.INSERT  ( only after Hive-0.14.x )
+ into hive tables from queries
+ into directories from queries
+ into hive tables from SQL
+	Syntax: INSERT INTO TABLE tablename [PARTITION (partcol1[=val1], partcol2[=val2] ...)] VALUES values_row [, values_row ...]
+3.UPDATE  ( only after Hive-0.14.x ) 
+	Syntax: UPDATE tablename SET column = value [, column = value ...] [WHERE expression]
+4.DELETE  ( only after Hive-0.14.x ) 
+	Syntax: DELETE FROM tablename [WHERE expression]
+ Note: EXPORT & IMPORT also available (hive-0.8.x onwards)
+
+1.LOAD :- Loading data from flat file to hive
+Syntax: LOAD DATA [LOCAL] INPATH 'filepath' [OVERWRITE] INTO TABLE tablename [PARTITION (partcol1=val1, partcol2=val2 ...)]
+
+
+
+Working with Hive:
+Using Hive CLI : 
+	$ hive
+	
+Using HiveServer2 : 
+  HiveServer2 (HS2) is a server interface that enables remote clients to execute queries against Hive and retrieve the results
+	$ hiveserver2   (or)
+	$ hive --service hiveserver2
+Using HiveServer2 client's CLI :
+   	$ beeline  ( available hive-0.14.x onwards)

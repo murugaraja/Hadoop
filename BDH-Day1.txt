@@ -1,0 +1,210 @@
+Bigdata And Hadoop
+==================
+
+
+What is Bigdata?
+IBM definition on BigData:
+Any data can be a BigData if it follows the below criterias:
+ a) Volume - Size of the data
+ b) Velocity - Speed of change/transfer of data (FB likes)
+ c) Variety - type of data
+   -Structured data - RDBMS schemas
+   -Semi-structured data - XML , JSON
+   -Unstructured data - pdf,png,...
+
+
+Hadoop:
+=======
+Hadoop is a java based framework. it has 2 components
+i. Storage part of Hadoop - HDFS
+ii. Processing part of Hadoop - MapReduce
+
+It is meant for OLAP. (Not for OLTP)
+
+It is scalable.
+ Scalabilty 
+ - Vertical scalabilty - Upgrading peripherals (Downtime introduced)
+ - Horizontal scalability - Add or remove systems (No Downtime)
+
+Hadoop Generations:
+-------------------
+Hadoop v1: Stable production ready version - Hadoop-1.2.1
+ a) HDFS - Storage
+ b) MapReduce - Processing
+Hadoop v2: Stable production ready version - Hadoop-2.5.2 (2.6.0)
+ a) HDFS - Storage
+ b) YARN - Yet Anothor Resource Negotiator - Processing
+
+
+Hadoop Distributions:
+---------------------
+Product Owned by      -- Name      --Availability-- Price--Support
+--------------------------------------------------------------------
+Apache S/w Foundation -- hadoop    --open source -- free -- no support
+Cloudera	      -- CDH 	   --commercial  -- ------- charges only for support
+HortonWorks	      -- HDP 	   --commercial  -- ------- charges only for support
+MapR-Tech	      -- MapRH 	   --commercial  -- ------- charges only for support
+Microsoft	      -- HDInsights--commercial  ---------- Cloud solution
+HortonWorks (Windows) -- Hadoop    --commercial  -- ------- charges support and all licenses
+
+
+Hadoop Criteria:
+----------------
+Linux OS (Preferably kernel 2.6 or above)
+SSH Service
+Java (6 or later)
+
+Comparison between Windows & Linux
+----------------------------------
+Objectives 	---	Windows  	---  *nix
+-----------------------------------------------------
+Os location  	---	C:		--- /
+SW location	--- C:/Program Files	--- /usr/lib
+FW location	--- C:/Windows		--- /usr/local
+User location	--- C:/Users		--- /home/
+
+Hadoop Daemons:
+================
+HDFS:
+------
+NameNode - NN   - master   (core-site.xml)
+DataNode - DN 	- slave	   (slaves)
+SecondaryNameNode - SNN    (masters)
+MR: 
+----
+JobTracker - JT  - master  (mapred-site.xml)
+TaskTracker - TT - slave   (slaves)
+
+
+Hadoop Execution Modes:
+=======================
+1) Standalone - No HDFS (All 5 services run in a JVM)
+2) Pseudo distributed - (HDFS available and Each service runs on its own JVM)
+3) Fully distributed  - (Multi-node cluster)
+
+
+Lab:
+=====
+1.Install VMware workstation
+2.Create a VM.
+3.Install Ubuntu-12.04LTS ( home should not be encrypted)
+4.Update the OS
+ 	$ sudo apt-get update
+5.Install Java7
+ 	$ sudo apt-get install openjdk-7-jdk
+6.Download Hadoop-1.2.1.tar.gz & extract the tar ball
+  	$ tar -xvzf hadoop-1.2.1.tar.gz
+7.Copy the contents of extracted into /usr/local/hadoop
+	$ sudo cp -r hadoop-1.2.1  /usr/local/hadoop
+8.To inform the system, where is the Hadoop 
+	$ sudo vi .bashrc
+		export HADOOP_PREFIX=/usr/local/hadoop
+		export PATH=$PATH:$HADOOP_PREFIX/bin
+9.Update the system
+	$ exec bash
+10.To inform Hadoop where is Java
+	$ sudo vi /usr/local/hadoop/conf/hadoop-env.sh
+		# Uncomment the below 
+		export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-i386
+
+
+Done !  
+
+$ hadoop
+$ hadoop jar <jarfile-name> <program-name> <input-path> <output-dir>
+$ vi /home/hadoop/abc.txt
+ 	hi this is my file 
+	here is the sample data
+	and i'm goin to invoke 
+	the wordcount program 
+	to test this file ..
+	come on lets cheer up !
+$ sudo jar /usr/local/hadoop/hadoop-examples-1.2.1.jar wordcount /home/hadoop/abc.txt /home/hadoop/outputDir
+$ ls /home/hadoop/outputDir
+$ cat /home/hadoop/outputDir/part-r-00000
+
+Done!
+
+
+Pseudo Setup:
+=============
+Please follow steps 1 to 10.
+
+11. Setup namenode service
+$ sudo	vi /usr/local/hadoop/conf/core-site.xml
+
+	fs.default.name = hdfs://<ip-address>:10001
+
+	[e.g: <property>
+		<name>fs.default.name</name>
+		<value>hdfs://192.168.81.155:10001</value>
+	      </property> 
+	]
+12. Set up JobTracker
+$ sudo vi /usr/local/hadoop/conf/mapred-site.xml
+	mapred.job.tracker = <ip-address>:10002
+
+	[e.g: <property>
+		<name>mapred.job.tracker</name>
+		<value>192.168.81.155:10002</value>
+	      </property> 
+	]
+
+13. Set up replication factor and mounted HDFS
+$ sudo vi /usr/local/hadoop/conf/hdfs-site.xml
+	hadoop.tmp.dir=/usr/local/hadoop/hdfs
+	dfs.replication=1
+
+	[e.g: <property>
+		<name>hadoop.tmp.dir</name>
+		<value>/usr/local/hadoop/hdfs</value>
+	      </property> 
+	      <property>
+		<name>dfs.replication</name>
+		<value>1</value>
+	      </property> 
+	]
+	
+14.Set up SecondaryNameNode (Optional)
+$ sudo vi /usr/local/hadoop/conf/masters
+
+15.Set up DataNode and TaskTracker (Optional)
+$ sudo vi /usr/local/hadoop/conf/slaves
+
+16.create necessary directory and change the ownership
+$ sudo mkdir /usr/local/hadoop/hdfs
+$ sudo chown hadoop /usr/local/hadoop/
+$ sudo chown hadoop /usr/local/hadoop/hdfs
+$ sudo chown hadoop /usr/local/hadoop/bin
+$ sudo chown hadoop /usr/local/hadoop/lib
+$ sudo chown hadoop /usr/local/hadoop/conf
+
+17.Format the NameNode
+$ hadoop namenode -format
+
+18.Password-less setup
+$ ssh-keygen        (Press enter 4 times)
+$ ssh-copy-id -i /home/hadoop/.ssh/id_rsa.pub hadoop@192.168.81.155
+
+19.Start Hadoop daemons
+$ start-all.sh
+
+$ jps
+
+Web UserInterface and corresponding  PORTS
+-------------------------------------------
+http://192.168.81.155:50070	- NN and DN
+http://192.168.81.155:50030	- JT
+http://192.168.81.155:50060 	- TT
+http://192.168.81.155:50090     - SNN
+
+Done! 
+
+
+
+Distributed Cluster Setup !
+----------------------------
+
+
+	  
+  

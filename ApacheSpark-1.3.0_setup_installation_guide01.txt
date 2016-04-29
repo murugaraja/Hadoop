@@ -1,0 +1,81 @@
+Apache Spark - local mode setup:
+=================================
+
+Getting Scala setup along with sbt, Scala’s build tool, on Ubuntu 12.04 can be done with this script:
+=====================================================================================================
+ 
+# Scala installation
+---------------------
+sudo apt-get remove scala-library scala
+wget http://www.scala-lang.org/files/archive/scala-2.11.2.deb
+sudo dpkg -i scala-2.11.2.deb
+sudo apt-get update
+sudo apt-get install scala
+
+# to test whether scall available
+---------------------------------
+scala -version       # scala-2.11.2
+which scala          # /usr/share/scala
+whereis scala        # loc of scala
+ 
+# sbt installation
+-------------------
+sudo apt-get purge sbt
+wget  0.13.5.deb
+sudo dpkg -i sbt-0.13.5.deb
+sudo apt-get update
+sudo apt-get install sbt
+
+# pre test before setup spark:
+-------------------------------
+sudo vi .bashrc    or  sudo vi /etc/profile
+
+ [to edit 
+ export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-i386
+ export SCALA_HOME=/usr/local/share/scala-2.11.2
+ export PATH=$PATH:$JAVA_HOME/bin:$SCALA_HOME/bin
+ ]
+
+# set up Spark
+---------------
+tar xvzf spark-1.3.0.tgz
+sudo cp -i spark-1.3.0/   /usr/local/
+ls /usr/local/spark-1.3.0
+sudo chown hadoopuser /usr/local/spark-1.3.0
+cd /usr/local/spark-1.3.0
+pwd
+# to build spark
+-----------------
+cd build
+sbt package
+sbt assembly
+
+# To run
+------------
+cd ..
+bin/spark-shell
+scala>  sc
+scala>  sc.appName
+
+# to test 
+----------
+firefox http://localhost:4040 or 4041
+
+
+# First Spark  program using scala
+-----------------------------------
+scala>  val data= Array(1,2,3,4,5);
+
+# RDD - Resilient Distributed Datasets
+---------------------------------------
+bin/spark-shell
+scala>  sc
+scala>  sc.appName
+scals> val data = Array(1,2,3,4,5,6,7,8)
+scala> val distData = sc.parallelize(data)
+scala> distData.collect()
+scala> val filteredData = distData.filter(_<3)
+scala> val resultArray = fliteredData.collect()
+
+
+

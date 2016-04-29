@@ -1,0 +1,274 @@
+Lets assume hadoop "standalone or pseudo distributed" setup already up and running:
+===================================================================================
+
+Hive Installation:
+------------------
+#unzip the tar ball downloaded from http://hive.apache.org
+tar -xvzf hive-0.11.0.tar.gz 
+cp -r hive-0.11.0/  /usr/local/hive
+ls /usr/local/hive
+sudo chown hadoop /usr/loca/hive
+# set the HIVE_PREFIX and PATH settings in .bashrc or /etc/profile
+cd ~
+sudo vi .bashrc
+  [ #to add
+    export HIVE_PREFIX=/usr/local/hive
+    export PATH=$PATH:$HIVE_PREFIX/bin
+ 
+  ]
+
+# Try hive  from CLI (Command Line Interface)
+# Running hive
+hive 
+
+hive> show databases;
+hive> create database hivedb;
+hive> use hivedb;
+hive> show tables;
+hive> create table demo(id int, name string);
+hive> show tables;
+hive> select * from demo ;
+
+{WebUI : firefox http://master-ip:50070/user/hive/warehouse } 
+ 
+
+# remember DML operation is not allowed in HIVE (e.g: NoViableAltException)
+
+hive> 
+
+
+# set up HADOOP_PREFIX or HADOOP_HOME in conf/hive-env.sh
+cp hive-env.sh.template hive.env.sh
+sudo vi hive-env.sh
+
+  [ #to uncomment 
+	export HADOOP_PREFIX=$HADOOP_PREFIX/bin   
+  ]
+
+#
+
+{
+Note:  
+Running HCatalog:
+-----------------
+To run the HCatalog server from the shell in Hive release 0.11.0 and later:
+
+  $  $HIVE_HOME/hcatalog/sbin/hcat_server.sh
+
+Running WebHCat (Templeton):
+----------------------------
+To run the WebHCat server from the shell in Hive release 0.11.0 and later:
+
+  $  $HIVE_HOME/hcatalog/sbin/webhcat_server.sh
+
+}
+
+
+# Configuration management overview
+=====================================
+cp  hive-default.xml.template  hive-default.xml
+
+# Any JDBC complaint DB Server can be connected
+# to add the below properties to hive-default.xml
+ [ 
+   javax.jdo.option.ConnectionURL 	 = jdbc:mysql:;databaseName=metastore_db;create=true
+   javax.jdo.option.ConnectionDriverName = com.mysql.jdbc.Driver
+   javax.jdo.option.ConnectionUserName	 = root
+   javax.jdo.option.ConnectionPassword 	 = <password>
+ ]
+
+sudo vi hive-default.xml
+ [
+   <property>
+	<name>javax.jdo.option.ConnectionURL</name>
+	<value>jdbc:mysql://localhost:3306/hive_mysql_db?CreateDatabaseIfNotExist=true</value>
+   </property> 
+
+   <property>
+	<name>javax.jdo.option.ConnectionDriverName</name>
+	<value>com.mysql.jdbc.Driver</value>
+   </property> 
+
+   <property>
+	<name>javax.jdo.option.ConnectionUserName</name>
+	<value>root</value>
+   </property> 
+
+   <property>
+	<name>javax.jdo.option.ConnectionPassword</name>
+	<value>root</value>
+   </property> 
+
+	
+ ]
+
+
+# Hive Configuration manipulated in 2 ways either change hive-site.xml or using CLI
+------------------------------------------------------------------------------------
+# CLI to configure variables in HIVE
+$ bin/hive --hiveconf variable1=value1  --hiveconf variable2=value2
+$ bin/hive --hiveconf javax.jdo.option.ConnectionUserName=root
+# which does the same as above.
+
+
+
+#Runtime Configuration
+=======================
+# The CLI command 'SET' can be used to set any Hadoop (or Hive) configuration variable. 
+# for 'MapReduce' mode
+hive> SET mapred.job.tracker=myhost.mycompany.com:50030 ;
+hive> SET mapred.job.tracker=localhost:50030 ;
+hive> SET -v ;
+# for 'local' mode
+hive> SET mapred.job.tracker=local ;
+
+
+{Note:
+Error logs:
+-------------
+available at  '/tmp/<user.name>/hive.log'
+
+To configure a different log location, set hive.log.dir in $HIVE_HOME/conf/hive-log4j.properties. Make sure the directory has the sticky bit set (chmod 1777 <dir>).
+
+    hive.log.dir=<other_location>
+
+If the user wishes, the logs can be emitted to the console by adding the arguments shown below:
+
+    bin/hive --hiveconf hive.root.logger=INFO,console
+}
+
+
+
+#DDL operations:
+----------------
+hive> create table test(id int,name string);
+hive> create table tab1(id int,name string) ;
+hive> create table tab2 (id int,name string ) partitioned by (ds string);
+hive> describe tab1;
+hive> describe tab2;  //ds virtual column
+hive> SHOW TABLES 't*';  // java regex
+
+#Alter and drop
+hive> alter table tab1 rename to table_1;
+hive> alter table table_1 add columns ( ccc int );
+
+hive> alter table table_1 replace columns (onlyone string );
+# changes only on meta-level not on data-level 
+hive> drop table tab2 ;
+
+# DML Operations:
+------------------
+vi testdata.txt
+***************
+  [
+	1 aaaaaaaaaa
+	2 bbbbbbbbbb
+	3 cccccccccc
+  ]
+
+# Loading data from flat files into Hive:
+
+hive> LOAD DATA LOCAL INPATH './testdata.txt' OVERWRITE INTO TABLE test;
+
+ [ firefox http://masterip:50070/user/hive/warehouse/test]
+
+hive> LOAD DATA LOCAL INPATH './testdata.txt' OVERWRITE INTO TABLE test PARTITION (ds='2008-08-08');
+
+{
+NOTES:
+
+    1. NO verification of data against the schema is performed by the load command.
+    2. If the file is in hdfs, it is moved into the Hive-controlled file system namespace.
+The root of the Hive directory is specified by the option hive.metastore.warehouse.dir in hive-default.xml. 
+We advise users to create this directory before trying to create tables via Hive.
+}
+
+hive> ! ls ;
+hive> !pwd ;
+ # upload data to hdfs
+hive> ! hadoop fs -copyFromLocal /home/hadoop/test.txt  /juju/testdata.txt  ;
+hive> ! hadoop fs -ls /juju  ;
+  # load data to hive  from hdfs
+hive> create table ttt (id int, name string);
+hive> LOAD DATA INPATH '/juju/testdata.txt' OVERWRITE INTO TABLE test;
+  
+  [ Note : check http://ip:50070/juju and http://ip:50070/user/hive/datawarehouse]
+
+
+# SQL operations
+=================
+# select query
+--------------
+Syntax: 
+[WITH CommonTableExpression (, CommonTableExpression)*] 
+   (Note: Only available starting with Hive 0.13.0)
+SELECT [ALL | DISTINCT] select_expr, select_expr, ...
+FROM table_reference 
+[WHERE where_condition]
+[GROUP BY col_list]
+[CLUSTER BY col_list  | [DISTRIBUTE BY col_list] 
+[SORT BY col_list]]
+[LIMIT number]
+
+
+Samples;
+-----------
+hive> SELECT * FROM t1 ;
+# to specify  a database
+
+[ hive> USE database_name;
+  hive> SELECT query_specifications;
+  hive> USE default;
+]
+
+# WHERE clause
+hive> SELECT * FROM sales WHERE amount > 10 AND region = "US"
+# ALL and DISTINCT Clauses
+hive> SELECT col1, col2 FROM t1
+hive> SELECT DISTINCT col1, col2 FROM t1
+
+# HAVING Clause
+hive> SELECT col1 FROM t1 GROUP BY col1 HAVING SUM(col2) > 10
+
+# LIMIT Clause
+hive> SELECT * FROM t1 LIMIT 5;
+
+
+
+
+
+## External table in HIVE - Hive cannot control these kinds of tables
+=====================================================================
+CREATE EXTERNAL TABLE ext_table (
+  uerid INT,
+  name STRING)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY '\t'
+STORED AS TEXTFILE;
+
+describe ext_table;
+load data local inpath '/home/hadoop/test.txt' into table ext_table ;
+select * from ext_table;   // see data available
+drop table ext_table ;   //  still data available in WebUI, /user/hive/warehouse/
+
+
+
+
+Conclusion:
+===========
+Mainly two types of table managed and external
+Managed table  : Hive takes the control on it
+External table : Hive does not take the control on these tables.
+
+Hive only for OLAP;it doest not support for DML (Insert|Delete|Update).
+
+Hive supports HQL language,which is very similar to SQL.
+
+Hive does upload data from local (OS file system ) and HDFS for further processing.
+
+
+
+
+---------------------------------------------------------------
+*************************Thank you*****************************
+---------------------------------------------------------------
